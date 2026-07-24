@@ -1,0 +1,39 @@
+# ---- Secrets (non-negotiable, PRD §12.3) ----
+.env
+.env.local
+*.key
+*.pem
+credentials*
+secrets*
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- LLM response cache (can be large; hash manifest is committed instead) ----
+cache/
+*.raw
+
+# ---- Large news corpora (committed via pointers/LFS, not raw) ----
+data/news/raw/
+data/news/*.parquet
+data/news/*.jsonl.gz
+
+# ---- Generated result artifacts that may embed raw model output ----
+results/*.raw
+results/**/*.raw
+
+# ---- OS / editor ----
+.DS_Store
+.idea/
+.vscode/

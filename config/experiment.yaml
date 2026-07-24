@@ -1,0 +1,130 @@
+# =============================================================================
+# experiment.yaml — every knob for the study (PRD §12.2).
+# Changing scope/window/model is a config edit, never a code change.
+# =============================================================================
+
+seed: 42  # fixed for reproducibility (PRD §12.6)
+
+# ---- Asset universe (PRD §5.1) ----
+assets:
+  - id: SPY
+    kind: equity
+    market_hours: us_session      # Mon-Fri
+    cost_bps_round_trip: 10        # PRD §7.7 default for SPY
+  - id: BTC
+    kind: crypto
+    market_hours: always          # 24/7
+    cost_bps_round_trip: 30        # crypto is more expensive to trade
+  - id: ETH
+    kind: crypto
+    market_hours: always
+    cost_bps_round_trip: 30
+
+# ---- Prediction horizons (PRD §5.2) ----
+horizons:
+  daily:
+    power: high                    # primary, non-overlapping
+    sampling: non_overlapping
+  weekly:
+    power: medium                  # overlapping + Newey-West/HAC
+    sampling: overlapping
+    hac: true
+  monthly:
+    power: low_exploratory         # downgraded; never headlined
+    sampling: overlapping
+    hac: true
+
+# ---- The up/down/stay neutral band (PRD §5.3) ----
+# theta chosen from the TRAINING/calibration window ONLY, never the test set.
+label_band:
+  method: vol_scaled               # fixed | vol_scaled (recommended)
+  vol_scaled:
+    k: 0.5                         # theta = k * trailing realized vol
+    lookback_days: 20
+  fixed:                           # used only if method == fixed
+    SPY:  { daily: 0.0025, weekly: 0.010, monthly: 0.020 }
+    BTC:  { daily: 0.0150, weekly: 0.040, monthly: 0.080 }
+    ETH:  { daily: 0.0180, weekly: 0.050, monthly: 0.090 }
+  # sensitivity sweep reported so results don't hinge on one cutoff (PRD §5.3)
+  sensitivity_k: [0.25, 0.5, 1.0]
+
+# ---- Prompt variants (PRD §5.5), frozen before the test window is scored ----
+prompts: [P0, P1, P2, P3]
+
+# ---- Input conditions (PRD §5.6) ----
+conditions: [news_only, news_plus_price]
+
+# ---- Models under test (PRD §9) ----
+# Each pinned to a version string + training cutoff (post-cutoff = clean window).
+models:
+  - id: baseline_always_up
+    kind: baseline
+  - id: baseline_random
+    kind: baseline
+  - id: baseline_momentum
+    kind: baseline
+  - id: baseline_sentiment
+    kind: baseline
+  - id: baseline_buy_hold
+    kind: baseline
+  # LLM models run on the Claude Max subscription via Claude Code -p (PRD §13.4).
+  # training_cutoff drives the clean-window start per model (PRD §7.2).
+  - id: claude_opus
+    kind: llm
+    provider: claude_code_cli      # `claude -p`, subscription auth, NO api key
+    model_string: claude-opus-4-8
+    training_cutoff: "2026-01-01"
+    enabled: false                 # flip on in Phase 3
+  - id: claude_sonnet
+    kind: llm
+    provider: claude_code_cli
+    model_string: claude-sonnet-5
+    training_cutoff: "2026-01-01"
+    enabled: false
+
+# ---- Backtest windows (PRD §11 two-window timeline) ----
+windows:
+  clean:                           # A — primary, post-cutoff, headline result
+    role: primary
+    # start is per-model (= its training_cutoff); end = latest available news
+    end: "2026-07-01"
+    news_sources: [gdelt, alphavantage_news, cryptopanic]
+  historical:                      # B — contaminated, "upper bound only"
+    role: upper_bound
+    start: "1999-01-01"
+    end: "2023-12-31"
+    news_sources: [fnspid]
+
+# calibration window: disjoint, earlier — where theta/prompt/baselines are set
+calibration:
+  # for the clean run, calibrate on the ~3 months immediately before window start
+  lookback_days: 90
+
+# ---- Economic backtest settings (PRD §7.7, §8.3) ----
+portfolio:
+  position_map: { UP: 1, DOWN: -1, STAY: 0 }   # long-short; use down_flat for long-only
+  down_flat: false                 # if true, DOWN -> 0 instead of -1
+  confidence_weighted: false       # position proportional to (confidence - 0.5)
+  execution_lag: next_available    # act at next price, not the close it was computed from
+  annualization: { daily: 252, weekly: 52, monthly: 12 }
+
+# ---- Statistics (PRD §8, §7.6) ----
+stats:
+  alpha: 0.05
+  fdr: benjamini_hochberg          # multiple-comparisons control across secondary cells
+  hac_maxlags: null                # null -> auto (~ horizon length) for Newey-West
+
+# ---- Data providers (PRD §6.1) ----
+data:
+  market_provider: csv             # csv (default, reproducible) | yfinance | stooq | polygon
+  prices_dir: data/prices
+  news_dir: data/news
+  drop_untrusted_timestamps: true  # PRD §6.2 hard requirement
+
+# ---- LLM usage control (PRD §13.2-13.3) ----
+llm:
+  temperature: 0.0
+  cache_dir: cache/llm             # git-ignored; keyed by (model, prompt, news_ids)
+  dry_run: false                   # if true, report call count, make no calls
+  max_retries: 5
+  backoff_seconds: [5, 15, 45, 120, 300]
