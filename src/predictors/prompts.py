@@ -12,6 +12,7 @@ events after the cutoff.
 from __future__ import annotations
 
 from src.data.assemble_context import PredictionContext
+from src.probes.masking import mask_dates
 
 RESPONSE_CONTRACT = (
     'Respond with ONLY this JSON and nothing else:\n'
@@ -44,9 +45,12 @@ def _price_block(context: PredictionContext) -> str:
 
 
 def _header(context: PredictionContext) -> str:
+    # Under the date-masking probe, the decision date itself is hidden so the
+    # model cannot anchor on the calendar (PRD §7.3).
+    when = "the cutoff (date hidden)" if context.mask_dates else context.as_of.isoformat()
     return (
         f"Asset: {context.asset}\n"
-        f"Decision time (cutoff): {context.as_of.isoformat()}\n"
+        f"Decision time (cutoff): {when}\n"
         f"Horizon: over the next {context.horizon}, will the CLOSE be higher, lower, "
         f"or roughly flat (within {_theta_pct(context)}) versus now?"
     )
@@ -55,9 +59,17 @@ def _header(context: PredictionContext) -> str:
 def _news_section(context: PredictionContext, limit: int = 60) -> str:
     if not context.news:
         return "--- NEWS ---\n(no admissible news before the cutoff)\n------------"
-    block = context.news_block()
-    lines = block.split("\n")[:limit]
-    return "--- NEWS (all published on or before the cutoff) ---\n" + "\n".join(lines) + "\n------------"
+    lines = []
+    for n in context.news[:limit]:
+        text = n.headline if not n.body else f"{n.headline} — {n.body}"
+        if context.mask_dates:
+            lines.append(f"- {mask_dates(text)}")  # no timestamp prefix, dates scrubbed
+        else:
+            ts = n.published_at.strftime("%Y-%m-%d %H:%M UTC")
+            lines.append(f"[{ts}] {text}")
+    banner = "--- NEWS (all published before the cutoff; dates hidden) ---" if context.mask_dates \
+        else "--- NEWS (all published on or before the cutoff) ---"
+    return banner + "\n" + "\n".join(lines) + "\n------------"
 
 
 def render_p0(context: PredictionContext) -> tuple[str, str]:

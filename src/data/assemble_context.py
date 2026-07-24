@@ -40,6 +40,7 @@ class PredictionContext:
     condition: str = "news_only"
     max_news: int | None = None
     theta: float | None = None  # neutral-band half-width at this bar (for prompts)
+    mask_dates: bool = False    # date-masking probe: hide explicit dates (PRD §7.3)
 
     @property
     def news_ids(self) -> list[str]:

@@ -44,7 +44,7 @@ The honest result may well be humbling — and that's a valid, publishable outco
 | **1. Scaffold + data pipeline + leakage test** | ✅ **done** |
 | **2. Baselines + backtest engine + committed baseline results** | ✅ **done** |
 | **3. LLM harness (Claude Max subscription, no API key)** | ✅ **done** |
-| 4. Full sweep + robustness + probes | ⏳ next |
+| 4. Lookahead/memorization probes ✅ · full sweep + robustness ⏳ | 🔶 in progress |
 | 5. Analysis + write-up | ▫️ |
 | 6. Public-readiness | ▫️ |
 
@@ -71,6 +71,25 @@ python -m src.run --dry-run --llm-model claude_opus --smoke   # count calls, mak
 python -m src.run --llm --llm-model claude_opus --smoke \
     --assets SPY --prompts P0 --llm-limit 5                    # a small real run
 ```
+
+Phase 4 (in progress) ships the **lookahead / memorization probes** (`src/probes/`,
+PRD §7.3) — the last fairness piece, which actively tests whether any LLM edge is
+genuine reasoning or memorized future:
+
+- **date-masking** — hide all dates; if accuracy collapses, the model was keying
+  on remembered dates.
+- **placebo-news** — feed mismatched-date news; skill should fall to chance and
+  predictions should *change* (proving the model reads the news).
+- **future-trivia** — ask the model to *recall* real outcomes; high recall means
+  it already knows the test period (contamination).
+
+```bash
+python -m scripts.run_probes --asset SPY --limit 20            # real Claude
+python -m scripts.run_probes --asset SPY --limit 20 --dry-run  # count calls only
+```
+
+Still to come in Phase 4: the full 72-cell LLM sweep (user-run, paced against
+usage limits) and θ-sensitivity / rolling-decay robustness.
 
 > ⚠️ The committed `data/` files are **synthetic samples** (deterministic, from
 > `scripts/make_sample_data.py`) so everything runs offline with no network.
