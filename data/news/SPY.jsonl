@@ -1,286 +1,286 @@
-{"news_id": "sample_SPY_0000", "published_at": "2025-01-01T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0001", "published_at": "2025-01-02T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0002", "published_at": "2025-01-03T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0003", "published_at": "2025-01-06T14:30:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0004", "published_at": "2025-01-07T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0005", "published_at": "2025-01-08T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0006", "published_at": "2025-01-09T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0007", "published_at": "2025-01-10T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0008", "published_at": "2025-01-13T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0009", "published_at": "2025-01-14T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0010", "published_at": "2025-01-15T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0011", "published_at": "2025-01-16T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0012", "published_at": "2025-01-17T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0013", "published_at": "2025-01-20T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0014", "published_at": "2025-01-21T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0015", "published_at": "2025-01-22T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0016", "published_at": "2025-01-23T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0017", "published_at": "2025-01-24T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0018", "published_at": "2025-01-27T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0019", "published_at": "2025-01-28T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0020", "published_at": "2025-01-29T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0021", "published_at": "2025-01-30T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0022", "published_at": "2025-01-31T14:30:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0023", "published_at": "2025-02-03T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0024", "published_at": "2025-02-04T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0025", "published_at": "2025-02-05T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0026", "published_at": "2025-02-06T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0027", "published_at": "2025-02-07T14:30:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0028", "published_at": "2025-02-10T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0029", "published_at": "2025-02-11T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0030", "published_at": "2025-02-12T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0031", "published_at": "2025-02-13T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0032", "published_at": "2025-02-14T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0033", "published_at": "2025-02-17T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0034", "published_at": "2025-02-18T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0035", "published_at": "2025-02-19T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0036", "published_at": "2025-02-20T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0037", "published_at": "2025-02-21T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0038", "published_at": "2025-02-24T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0039", "published_at": "2025-02-25T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0040", "published_at": "2025-02-26T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0041", "published_at": "2025-02-27T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0042", "published_at": "2025-02-28T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0043", "published_at": "2025-03-03T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0044", "published_at": "2025-03-04T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0045", "published_at": "2025-03-05T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0046", "published_at": "2025-03-06T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0047", "published_at": "2025-03-07T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0048", "published_at": "2025-03-10T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0049", "published_at": "2025-03-11T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0050", "published_at": "2025-03-12T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0051", "published_at": "2025-03-13T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0052", "published_at": "2025-03-14T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0053", "published_at": "2025-03-17T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0054", "published_at": "2025-03-18T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0055", "published_at": "2025-03-19T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0056", "published_at": "2025-03-20T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0057", "published_at": "2025-03-21T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0058", "published_at": "2025-03-24T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0059", "published_at": "2025-03-25T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0060", "published_at": "2025-03-26T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0061", "published_at": "2025-03-27T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0062", "published_at": "2025-03-28T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0063", "published_at": "2025-03-31T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0064", "published_at": "2025-04-01T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0065", "published_at": "2025-04-02T14:30:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0066", "published_at": "2025-04-03T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0067", "published_at": "2025-04-04T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0068", "published_at": "2025-04-07T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0069", "published_at": "2025-04-08T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0070", "published_at": "2025-04-09T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0071", "published_at": "2025-04-10T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0072", "published_at": "2025-04-11T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0073", "published_at": "2025-04-14T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0074", "published_at": "2025-04-15T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0075", "published_at": "2025-04-16T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0076", "published_at": "2025-04-17T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0077", "published_at": "2025-04-18T14:30:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0078", "published_at": "2025-04-21T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0079", "published_at": "2025-04-22T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0080", "published_at": "2025-04-23T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0081", "published_at": "2025-04-24T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0082", "published_at": "2025-04-25T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0083", "published_at": "2025-04-28T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0084", "published_at": "2025-04-29T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0085", "published_at": "2025-04-30T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0086", "published_at": "2025-05-01T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0087", "published_at": "2025-05-02T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0088", "published_at": "2025-05-05T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0089", "published_at": "2025-05-06T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0090", "published_at": "2025-05-07T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0091", "published_at": "2025-05-08T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0092", "published_at": "2025-05-09T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0093", "published_at": "2025-05-12T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0094", "published_at": "2025-05-13T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0095", "published_at": "2025-05-14T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0096", "published_at": "2025-05-15T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0097", "published_at": "2025-05-16T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0098", "published_at": "2025-05-19T14:30:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0099", "published_at": "2025-05-20T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0100", "published_at": "2025-05-21T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0101", "published_at": "2025-05-22T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0102", "published_at": "2025-05-23T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0103", "published_at": "2025-05-26T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0104", "published_at": "2025-05-27T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0105", "published_at": "2025-05-28T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0106", "published_at": "2025-05-29T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0107", "published_at": "2025-05-30T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0108", "published_at": "2025-06-02T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0109", "published_at": "2025-06-03T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0110", "published_at": "2025-06-04T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0111", "published_at": "2025-06-05T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0112", "published_at": "2025-06-06T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0113", "published_at": "2025-06-09T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0114", "published_at": "2025-06-10T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0115", "published_at": "2025-06-11T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0116", "published_at": "2025-06-12T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0117", "published_at": "2025-06-13T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0118", "published_at": "2025-06-16T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0119", "published_at": "2025-06-17T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0120", "published_at": "2025-06-18T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0121", "published_at": "2025-06-19T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0122", "published_at": "2025-06-20T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0123", "published_at": "2025-06-23T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0124", "published_at": "2025-06-24T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0125", "published_at": "2025-06-25T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0126", "published_at": "2025-06-26T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0127", "published_at": "2025-06-27T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0128", "published_at": "2025-06-30T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0129", "published_at": "2025-07-01T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0130", "published_at": "2025-07-02T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0131", "published_at": "2025-07-03T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0132", "published_at": "2025-07-04T14:30:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0133", "published_at": "2025-07-07T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0134", "published_at": "2025-07-08T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0135", "published_at": "2025-07-09T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0136", "published_at": "2025-07-10T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0137", "published_at": "2025-07-11T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0138", "published_at": "2025-07-14T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0139", "published_at": "2025-07-15T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0140", "published_at": "2025-07-16T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0141", "published_at": "2025-07-17T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0142", "published_at": "2025-07-18T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0143", "published_at": "2025-07-21T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0144", "published_at": "2025-07-22T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0145", "published_at": "2025-07-23T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0146", "published_at": "2025-07-24T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0147", "published_at": "2025-07-25T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0148", "published_at": "2025-07-28T14:30:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0149", "published_at": "2025-07-29T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0150", "published_at": "2025-07-30T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0151", "published_at": "2025-07-31T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0152", "published_at": "2025-08-01T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0153", "published_at": "2025-08-04T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0154", "published_at": "2025-08-05T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0155", "published_at": "2025-08-06T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0156", "published_at": "2025-08-07T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0157", "published_at": "2025-08-08T14:30:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0158", "published_at": "2025-08-11T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0159", "published_at": "2025-08-12T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0160", "published_at": "2025-08-13T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0161", "published_at": "2025-08-14T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0162", "published_at": "2025-08-15T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0163", "published_at": "2025-08-18T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0164", "published_at": "2025-08-19T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0165", "published_at": "2025-08-20T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0166", "published_at": "2025-08-21T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0167", "published_at": "2025-08-22T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0168", "published_at": "2025-08-25T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0169", "published_at": "2025-08-26T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0170", "published_at": "2025-08-27T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0171", "published_at": "2025-08-28T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0172", "published_at": "2025-08-29T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0173", "published_at": "2025-09-01T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0174", "published_at": "2025-09-02T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0175", "published_at": "2025-09-03T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0176", "published_at": "2025-09-04T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0177", "published_at": "2025-09-05T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0178", "published_at": "2025-09-08T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0179", "published_at": "2025-09-09T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0180", "published_at": "2025-09-10T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0181", "published_at": "2025-09-11T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0182", "published_at": "2025-09-12T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0183", "published_at": "2025-09-15T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0184", "published_at": "2025-09-16T14:30:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0185", "published_at": "2025-09-17T14:30:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0186", "published_at": "2025-09-18T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0187", "published_at": "2025-09-19T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0188", "published_at": "2025-09-22T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0189", "published_at": "2025-09-23T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0190", "published_at": "2025-09-24T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0191", "published_at": "2025-09-25T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0192", "published_at": "2025-09-26T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0193", "published_at": "2025-09-29T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0194", "published_at": "2025-09-30T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0195", "published_at": "2025-10-01T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0196", "published_at": "2025-10-02T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0197", "published_at": "2025-10-03T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0198", "published_at": "2025-10-06T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0199", "published_at": "2025-10-07T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0200", "published_at": "2025-10-08T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0201", "published_at": "2025-10-09T14:30:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0202", "published_at": "2025-10-10T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0203", "published_at": "2025-10-13T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0204", "published_at": "2025-10-14T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0205", "published_at": "2025-10-15T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0206", "published_at": "2025-10-16T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0207", "published_at": "2025-10-17T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0208", "published_at": "2025-10-20T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0209", "published_at": "2025-10-21T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0210", "published_at": "2025-10-22T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0211", "published_at": "2025-10-23T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0212", "published_at": "2025-10-24T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0213", "published_at": "2025-10-27T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0214", "published_at": "2025-10-28T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0215", "published_at": "2025-10-29T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0216", "published_at": "2025-10-30T14:30:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0217", "published_at": "2025-10-31T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0218", "published_at": "2025-11-03T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0219", "published_at": "2025-11-04T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0220", "published_at": "2025-11-05T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0221", "published_at": "2025-11-06T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0222", "published_at": "2025-11-07T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0223", "published_at": "2025-11-10T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0224", "published_at": "2025-11-11T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0225", "published_at": "2025-11-12T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0226", "published_at": "2025-11-13T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0227", "published_at": "2025-11-14T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0228", "published_at": "2025-11-17T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0229", "published_at": "2025-11-18T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0230", "published_at": "2025-11-19T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0231", "published_at": "2025-11-20T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0232", "published_at": "2025-11-21T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0233", "published_at": "2025-11-24T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0234", "published_at": "2025-11-25T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0235", "published_at": "2025-11-26T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0236", "published_at": "2025-11-27T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0237", "published_at": "2025-11-28T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0238", "published_at": "2025-12-01T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0239", "published_at": "2025-12-02T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0240", "published_at": "2025-12-03T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0241", "published_at": "2025-12-04T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0242", "published_at": "2025-12-05T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0243", "published_at": "2025-12-08T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0244", "published_at": "2025-12-09T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0245", "published_at": "2025-12-10T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0246", "published_at": "2025-12-11T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0247", "published_at": "2025-12-12T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0248", "published_at": "2025-12-15T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0249", "published_at": "2025-12-16T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0250", "published_at": "2025-12-17T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0251", "published_at": "2025-12-18T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0252", "published_at": "2025-12-19T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0253", "published_at": "2025-12-22T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0254", "published_at": "2025-12-23T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0255", "published_at": "2025-12-24T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0256", "published_at": "2025-12-25T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0257", "published_at": "2025-12-26T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0258", "published_at": "2025-12-29T14:30:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0259", "published_at": "2025-12-30T14:30:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0260", "published_at": "2025-12-31T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0261", "published_at": "2026-01-01T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0262", "published_at": "2026-01-02T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0263", "published_at": "2026-01-05T14:30:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0264", "published_at": "2026-01-06T14:30:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0265", "published_at": "2026-01-07T14:30:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0266", "published_at": "2026-01-08T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0267", "published_at": "2026-01-09T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0268", "published_at": "2026-01-12T14:30:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0269", "published_at": "2026-01-13T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0270", "published_at": "2026-01-14T14:30:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0271", "published_at": "2026-01-15T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0272", "published_at": "2026-01-16T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0273", "published_at": "2026-01-19T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0274", "published_at": "2026-01-20T14:30:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0275", "published_at": "2026-01-21T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0276", "published_at": "2026-01-22T14:30:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0277", "published_at": "2026-01-23T14:30:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0278", "published_at": "2026-01-26T14:30:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0279", "published_at": "2026-01-27T14:30:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0280", "published_at": "2026-01-28T14:30:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0281", "published_at": "2026-01-29T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0282", "published_at": "2026-01-30T14:30:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0283", "published_at": "2026-02-02T14:30:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0284", "published_at": "2026-02-03T14:30:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
-{"news_id": "sample_SPY_0285", "published_at": "2026-02-04T14:30:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0000", "published_at": "2025-01-01T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0001", "published_at": "2025-01-02T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0002", "published_at": "2025-01-03T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0003", "published_at": "2025-01-06T13:00:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0004", "published_at": "2025-01-07T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0005", "published_at": "2025-01-08T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0006", "published_at": "2025-01-09T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0007", "published_at": "2025-01-10T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0008", "published_at": "2025-01-13T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0009", "published_at": "2025-01-14T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0010", "published_at": "2025-01-15T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0011", "published_at": "2025-01-16T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0012", "published_at": "2025-01-17T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0013", "published_at": "2025-01-20T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0014", "published_at": "2025-01-21T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0015", "published_at": "2025-01-22T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0016", "published_at": "2025-01-23T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0017", "published_at": "2025-01-24T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0018", "published_at": "2025-01-27T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0019", "published_at": "2025-01-28T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0020", "published_at": "2025-01-29T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0021", "published_at": "2025-01-30T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0022", "published_at": "2025-01-31T13:00:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0023", "published_at": "2025-02-03T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0024", "published_at": "2025-02-04T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0025", "published_at": "2025-02-05T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0026", "published_at": "2025-02-06T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0027", "published_at": "2025-02-07T13:00:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0028", "published_at": "2025-02-10T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0029", "published_at": "2025-02-11T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0030", "published_at": "2025-02-12T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0031", "published_at": "2025-02-13T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0032", "published_at": "2025-02-14T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0033", "published_at": "2025-02-17T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0034", "published_at": "2025-02-18T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0035", "published_at": "2025-02-19T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0036", "published_at": "2025-02-20T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0037", "published_at": "2025-02-21T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0038", "published_at": "2025-02-24T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0039", "published_at": "2025-02-25T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0040", "published_at": "2025-02-26T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0041", "published_at": "2025-02-27T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0042", "published_at": "2025-02-28T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0043", "published_at": "2025-03-03T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0044", "published_at": "2025-03-04T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0045", "published_at": "2025-03-05T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0046", "published_at": "2025-03-06T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0047", "published_at": "2025-03-07T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0048", "published_at": "2025-03-10T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0049", "published_at": "2025-03-11T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0050", "published_at": "2025-03-12T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0051", "published_at": "2025-03-13T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0052", "published_at": "2025-03-14T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0053", "published_at": "2025-03-17T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0054", "published_at": "2025-03-18T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0055", "published_at": "2025-03-19T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0056", "published_at": "2025-03-20T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0057", "published_at": "2025-03-21T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0058", "published_at": "2025-03-24T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0059", "published_at": "2025-03-25T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0060", "published_at": "2025-03-26T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0061", "published_at": "2025-03-27T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0062", "published_at": "2025-03-28T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0063", "published_at": "2025-03-31T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0064", "published_at": "2025-04-01T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0065", "published_at": "2025-04-02T13:00:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0066", "published_at": "2025-04-03T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0067", "published_at": "2025-04-04T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0068", "published_at": "2025-04-07T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0069", "published_at": "2025-04-08T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0070", "published_at": "2025-04-09T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0071", "published_at": "2025-04-10T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0072", "published_at": "2025-04-11T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0073", "published_at": "2025-04-14T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0074", "published_at": "2025-04-15T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0075", "published_at": "2025-04-16T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0076", "published_at": "2025-04-17T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0077", "published_at": "2025-04-18T13:00:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0078", "published_at": "2025-04-21T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0079", "published_at": "2025-04-22T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0080", "published_at": "2025-04-23T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0081", "published_at": "2025-04-24T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0082", "published_at": "2025-04-25T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0083", "published_at": "2025-04-28T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0084", "published_at": "2025-04-29T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0085", "published_at": "2025-04-30T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0086", "published_at": "2025-05-01T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0087", "published_at": "2025-05-02T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0088", "published_at": "2025-05-05T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0089", "published_at": "2025-05-06T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0090", "published_at": "2025-05-07T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0091", "published_at": "2025-05-08T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0092", "published_at": "2025-05-09T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0093", "published_at": "2025-05-12T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0094", "published_at": "2025-05-13T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0095", "published_at": "2025-05-14T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0096", "published_at": "2025-05-15T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0097", "published_at": "2025-05-16T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0098", "published_at": "2025-05-19T13:00:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0099", "published_at": "2025-05-20T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0100", "published_at": "2025-05-21T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0101", "published_at": "2025-05-22T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0102", "published_at": "2025-05-23T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0103", "published_at": "2025-05-26T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0104", "published_at": "2025-05-27T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0105", "published_at": "2025-05-28T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0106", "published_at": "2025-05-29T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0107", "published_at": "2025-05-30T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0108", "published_at": "2025-06-02T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0109", "published_at": "2025-06-03T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0110", "published_at": "2025-06-04T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0111", "published_at": "2025-06-05T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0112", "published_at": "2025-06-06T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0113", "published_at": "2025-06-09T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0114", "published_at": "2025-06-10T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0115", "published_at": "2025-06-11T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0116", "published_at": "2025-06-12T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0117", "published_at": "2025-06-13T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0118", "published_at": "2025-06-16T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0119", "published_at": "2025-06-17T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0120", "published_at": "2025-06-18T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0121", "published_at": "2025-06-19T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0122", "published_at": "2025-06-20T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0123", "published_at": "2025-06-23T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0124", "published_at": "2025-06-24T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0125", "published_at": "2025-06-25T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0126", "published_at": "2025-06-26T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0127", "published_at": "2025-06-27T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0128", "published_at": "2025-06-30T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0129", "published_at": "2025-07-01T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0130", "published_at": "2025-07-02T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0131", "published_at": "2025-07-03T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0132", "published_at": "2025-07-04T13:00:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0133", "published_at": "2025-07-07T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0134", "published_at": "2025-07-08T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0135", "published_at": "2025-07-09T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0136", "published_at": "2025-07-10T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0137", "published_at": "2025-07-11T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0138", "published_at": "2025-07-14T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0139", "published_at": "2025-07-15T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0140", "published_at": "2025-07-16T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0141", "published_at": "2025-07-17T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0142", "published_at": "2025-07-18T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0143", "published_at": "2025-07-21T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0144", "published_at": "2025-07-22T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0145", "published_at": "2025-07-23T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0146", "published_at": "2025-07-24T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0147", "published_at": "2025-07-25T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0148", "published_at": "2025-07-28T13:00:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0149", "published_at": "2025-07-29T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0150", "published_at": "2025-07-30T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0151", "published_at": "2025-07-31T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0152", "published_at": "2025-08-01T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0153", "published_at": "2025-08-04T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0154", "published_at": "2025-08-05T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0155", "published_at": "2025-08-06T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0156", "published_at": "2025-08-07T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0157", "published_at": "2025-08-08T13:00:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0158", "published_at": "2025-08-11T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0159", "published_at": "2025-08-12T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0160", "published_at": "2025-08-13T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0161", "published_at": "2025-08-14T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0162", "published_at": "2025-08-15T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0163", "published_at": "2025-08-18T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0164", "published_at": "2025-08-19T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0165", "published_at": "2025-08-20T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0166", "published_at": "2025-08-21T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0167", "published_at": "2025-08-22T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0168", "published_at": "2025-08-25T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0169", "published_at": "2025-08-26T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0170", "published_at": "2025-08-27T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0171", "published_at": "2025-08-28T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0172", "published_at": "2025-08-29T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0173", "published_at": "2025-09-01T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0174", "published_at": "2025-09-02T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0175", "published_at": "2025-09-03T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0176", "published_at": "2025-09-04T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0177", "published_at": "2025-09-05T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0178", "published_at": "2025-09-08T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0179", "published_at": "2025-09-09T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0180", "published_at": "2025-09-10T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0181", "published_at": "2025-09-11T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0182", "published_at": "2025-09-12T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0183", "published_at": "2025-09-15T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0184", "published_at": "2025-09-16T13:00:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0185", "published_at": "2025-09-17T13:00:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0186", "published_at": "2025-09-18T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0187", "published_at": "2025-09-19T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0188", "published_at": "2025-09-22T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0189", "published_at": "2025-09-23T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0190", "published_at": "2025-09-24T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0191", "published_at": "2025-09-25T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0192", "published_at": "2025-09-26T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0193", "published_at": "2025-09-29T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0194", "published_at": "2025-09-30T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0195", "published_at": "2025-10-01T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0196", "published_at": "2025-10-02T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0197", "published_at": "2025-10-03T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0198", "published_at": "2025-10-06T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0199", "published_at": "2025-10-07T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0200", "published_at": "2025-10-08T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0201", "published_at": "2025-10-09T13:00:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0202", "published_at": "2025-10-10T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0203", "published_at": "2025-10-13T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0204", "published_at": "2025-10-14T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0205", "published_at": "2025-10-15T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0206", "published_at": "2025-10-16T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0207", "published_at": "2025-10-17T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0208", "published_at": "2025-10-20T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0209", "published_at": "2025-10-21T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0210", "published_at": "2025-10-22T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0211", "published_at": "2025-10-23T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0212", "published_at": "2025-10-24T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0213", "published_at": "2025-10-27T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0214", "published_at": "2025-10-28T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0215", "published_at": "2025-10-29T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0216", "published_at": "2025-10-30T13:00:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0217", "published_at": "2025-10-31T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0218", "published_at": "2025-11-03T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0219", "published_at": "2025-11-04T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0220", "published_at": "2025-11-05T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0221", "published_at": "2025-11-06T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0222", "published_at": "2025-11-07T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0223", "published_at": "2025-11-10T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0224", "published_at": "2025-11-11T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0225", "published_at": "2025-11-12T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0226", "published_at": "2025-11-13T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0227", "published_at": "2025-11-14T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0228", "published_at": "2025-11-17T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0229", "published_at": "2025-11-18T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0230", "published_at": "2025-11-19T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0231", "published_at": "2025-11-20T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0232", "published_at": "2025-11-21T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0233", "published_at": "2025-11-24T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0234", "published_at": "2025-11-25T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0235", "published_at": "2025-11-26T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0236", "published_at": "2025-11-27T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0237", "published_at": "2025-11-28T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0238", "published_at": "2025-12-01T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0239", "published_at": "2025-12-02T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0240", "published_at": "2025-12-03T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0241", "published_at": "2025-12-04T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0242", "published_at": "2025-12-05T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0243", "published_at": "2025-12-08T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0244", "published_at": "2025-12-09T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0245", "published_at": "2025-12-10T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0246", "published_at": "2025-12-11T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0247", "published_at": "2025-12-12T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0248", "published_at": "2025-12-15T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0249", "published_at": "2025-12-16T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0250", "published_at": "2025-12-17T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0251", "published_at": "2025-12-18T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0252", "published_at": "2025-12-19T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0253", "published_at": "2025-12-22T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0254", "published_at": "2025-12-23T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0255", "published_at": "2025-12-24T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0256", "published_at": "2025-12-25T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0257", "published_at": "2025-12-26T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0258", "published_at": "2025-12-29T13:00:00+00:00", "headline": "SPY declines amid recession warning", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0259", "published_at": "2025-12-30T13:00:00+00:00", "headline": "SPY drops after downgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0260", "published_at": "2025-12-31T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0261", "published_at": "2026-01-01T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0262", "published_at": "2026-01-02T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0263", "published_at": "2026-01-05T13:00:00+00:00", "headline": "SPY plunges on weak guidance", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0264", "published_at": "2026-01-06T13:00:00+00:00", "headline": "SPY rallies as inflation cools", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0265", "published_at": "2026-01-07T13:00:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0266", "published_at": "2026-01-08T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0267", "published_at": "2026-01-09T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0268", "published_at": "2026-01-12T13:00:00+00:00", "headline": "SPY climbs on adoption news", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0269", "published_at": "2026-01-13T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0270", "published_at": "2026-01-14T13:00:00+00:00", "headline": "SPY sinks after probe", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0271", "published_at": "2026-01-15T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0272", "published_at": "2026-01-16T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0273", "published_at": "2026-01-19T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0274", "published_at": "2026-01-20T13:00:00+00:00", "headline": "SPY trades sideways in quiet session", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0275", "published_at": "2026-01-21T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0276", "published_at": "2026-01-22T13:00:00+00:00", "headline": "SPY slumps on selloff", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0277", "published_at": "2026-01-23T13:00:00+00:00", "headline": "SPY holds steady as traders wait", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0278", "published_at": "2026-01-26T13:00:00+00:00", "headline": "SPY boosted by partnership", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0279", "published_at": "2026-01-27T13:00:00+00:00", "headline": "SPY jumps after record profit", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0280", "published_at": "2026-01-28T13:00:00+00:00", "headline": "SPY surges on strong earnings", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0281", "published_at": "2026-01-29T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0282", "published_at": "2026-01-30T13:00:00+00:00", "headline": "SPY little changed ahead of data", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0283", "published_at": "2026-02-02T13:00:00+00:00", "headline": "SPY gains on upgrade", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0284", "published_at": "2026-02-03T13:00:00+00:00", "headline": "SPY falls as fears mount", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}
+{"news_id": "sample_SPY_0285", "published_at": "2026-02-04T13:00:00+00:00", "headline": "SPY mixed as volume thins", "body": "", "source": "SYNTHETIC_SAMPLE", "assets": ["SPY"]}

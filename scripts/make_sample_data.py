@@ -40,11 +40,19 @@ _NEUTRAL = ["trades sideways in quiet session", "little changed ahead of data",
             "holds steady as traders wait", "mixed as volume thins"]
 
 
+# Each bar's timestamp is its close / decision boundary (21:00 UTC ~ US close).
+# News is stamped earlier the same day (13:00 UTC) so it is admissible for that
+# day's decision (published_at < as_of). This makes decision timing unambiguous:
+# as_of == the bar timestamp, and same-day pre-close news is fair game.
+CLOSE_HOUR = 21
+NEWS_HOUR = 13
+
+
 def _calendar(kind: str) -> pd.DatetimeIndex:
     all_days = pd.date_range(START, periods=N_DAYS, freq="D", tz="UTC")
     if kind == "equity":
-        return all_days[all_days.weekday < 5]  # weekdays only
-    return all_days  # crypto 24/7
+        all_days = all_days[all_days.weekday < 5]  # weekdays only
+    return all_days + pd.Timedelta(hours=CLOSE_HOUR)
 
 
 def make_prices(rng: np.random.Generator, kind: str, p0: float, mu: float, sigma: float) -> pd.DataFrame:
@@ -82,7 +90,7 @@ def make_news(rng: np.random.Generator, asset: str, prices: pd.DataFrame) -> lis
             phrase = rng.choice(_POS if move >= 0 else _NEG)
         else:
             phrase = rng.choice(_NEUTRAL)
-        ts = pd.Timestamp(row["date"]).replace(hour=14, minute=30)
+        ts = pd.Timestamp(row["date"]).replace(hour=NEWS_HOUR, minute=0)
         items.append(
             {
                 "news_id": f"sample_{asset}_{i:04d}",

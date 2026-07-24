@@ -42,8 +42,8 @@ The honest result may well be humbling — and that's a valid, publishable outco
 |---|---|
 | 0. Design sign-off (`PRD.md`) | ✅ |
 | **1. Scaffold + data pipeline + leakage test** | ✅ **done** |
-| 2. Baselines + backtest engine + committed baseline results | ⏳ next |
-| 3. LLM harness (Claude Max subscription, no API key) | ▫️ |
+| **2. Baselines + backtest engine + committed baseline results** | ✅ **done** |
+| 3. LLM harness (Claude Max subscription, no API key) | ⏳ next |
 | 4. Full sweep + robustness + probes | ▫️ |
 | 5. Analysis + write-up | ▫️ |
 | 6. Public-readiness | ▫️ |
@@ -52,6 +52,14 @@ Phase 1 ships: the source-agnostic market/news providers, the point-in-time
 gate, up/down/stay labeling, the shared prediction schema, all five baselines,
 and a leakage test that goes red if future data ever leaks.
 
+Phase 2 ships: the walk-forward engine, the portfolio / costs / execution-lag
+economic lens, the full metrics suite (Pesaran-Timmermann, Diebold-Mariano,
+Brier, Sharpe / Sortino / max-drawdown, Newey-West HAC), and a one-command run
+that produces **committed baseline results** — the market bar the LLM must beat.
+See [`results/baseline_results.md`](results/baseline_results.md) and
+`results/figures/`. The same-interface Claude predictors slot into the identical
+loop in Phase 3.
+
 > ⚠️ The committed `data/` files are **synthetic samples** (deterministic, from
 > `scripts/make_sample_data.py`) so everything runs offline with no network.
 > They carry no real predictive signal. Real snapshots replace them via the live
@@ -59,14 +67,16 @@ and a leakage test that goes red if future data ever leaks.
 
 ---
 
-## Reproduce (Phase 1)
+## Reproduce (Phases 1–2)
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 python -m pip install -e ".[dev]"        # or: pip install -r requirements.lock.txt
 
 python -m scripts.make_sample_data       # regenerate the synthetic sample fixtures
-python -m pytest -q                       # 27 tests incl. the leakage suite
+python -m pytest -q                       # 43 tests incl. the leakage suite
+python -m src.run                         # baseline sweep -> results/ (md, csv, figures)
+#   python -m src.run --smoke             # daily horizon only (quick)
 ```
 
 No secrets, no API keys, no network required. The LLM path (Phase 3) runs on a
