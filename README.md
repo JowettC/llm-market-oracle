@@ -88,8 +88,14 @@ python -m scripts.run_probes --asset SPY --limit 20            # real Claude
 python -m scripts.run_probes --asset SPY --limit 20 --dry-run  # count calls only
 ```
 
-Still to come in Phase 4: the full 72-cell LLM sweep (user-run, paced against
-usage limits) and θ-sensitivity / rolling-decay robustness.
+Phase 4 also ships **robustness** for the baselines (`scripts/run_robustness.py`
+→ [`results/robustness.md`](results/robustness.md)): θ band-width sensitivity
+(results across `k ∈ {0.25, 0.5, 1.0}`) and rolling-window decay (per-sub-period
+accuracy + Sharpe, exposing non-stationarity, H4).
+
+Still to come in Phase 4: the full 72-cell LLM sweep — **user-run**, paced
+against subscription usage limits (use `--dry-run` to size it, `--llm-limit` /
+`--assets` / `--prompts` to stage it).
 
 > ⚠️ The committed `data/` files are **synthetic samples** (deterministic, from
 > `scripts/make_sample_data.py`) so everything runs offline with no network.
