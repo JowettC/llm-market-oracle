@@ -45,11 +45,34 @@ def build_baselines(cfg, market, asset_kind_map, calib_freq, seed):
     ]
 
 
-def split_windows(close: pd.Series, calib_lookback_days: int):
-    """Disjoint calibration (front) and test (rest) windows over the sample data."""
-    start = close.index[0]
-    calib_end = start + pd.Timedelta(days=calib_lookback_days)
-    return start, calib_end, close.index[-1]
+def news_window(news_provider, asset_id: str):
+    """(earliest, latest) published_at for an asset, or (None, None) if no news."""
+    items = news_provider.get_items(asset_id)
+    if not items:
+        return None, None
+    ts = sorted(i.published_at for i in items)
+    return ts[0], ts[-1]
+
+
+def scored_and_calib_windows(close: pd.Series, news_provider, asset_id: str, lookback_days: int):
+    """Align the scored window to the NEWS corpus so every baseline is judged on
+    identical decisions; calibrate on the disjoint price history just before it.
+
+    With real news covering only a recent window, scoring the full price history
+    would make the news-based predictors incoherent. We therefore score all
+    models on [news_start, news_end] and calibrate θ/class-freq strictly earlier.
+    Falls back to a price-only split when an asset has no news.
+    """
+    price_start, price_end = close.index[0], close.index[-1]
+    n_start, n_end = news_window(news_provider, asset_id)
+    if n_start is None:  # no news committed for this asset
+        scored_start = price_start + pd.Timedelta(days=lookback_days)
+        return scored_start, price_end, price_start, scored_start
+    scored_start = max(price_start, n_start)
+    scored_end = min(price_end, n_end)
+    calib_hi = scored_start
+    calib_lo = max(price_start, scored_start - pd.Timedelta(days=lookback_days))
+    return scored_start, scored_end, calib_lo, calib_hi
 
 
 def main() -> None:
@@ -75,12 +98,16 @@ def main() -> None:
         asset_id, kind = asset["id"], asset["kind"]
         cost_bps = float(asset.get("cost_bps_round_trip", 10))
         close = market.get_ohlcv(asset_id)["close"]
-        start, calib_end, end = split_windows(close, cfg.get("calibration", {}).get("lookback_days", 90))
+        lookback = cfg.get("calibration", {}).get("lookback_days", 90)
+        scored_start, scored_end, calib_lo, calib_hi = scored_and_calib_windows(
+            close, news, asset_id, lookback)
+        print(f"# {asset_id}: score {scored_start.date()}..{scored_end.date()}  "
+              f"(calib {calib_lo.date()}..{calib_hi.date()})")
 
         for horizon in horizons:
             # calibrate the stratified-random class frequencies on the calib window only
             labeled = build_labels(close, asset_id, kind, horizon, band_cfg)
-            calib_mask = (labeled.label.index >= start) & (labeled.label.index < calib_end)
+            calib_mask = (labeled.label.index >= calib_lo) & (labeled.label.index < calib_hi)
             calib_freq = estimate_class_freq(labeled.label[calib_mask])
 
             predictors = build_baselines(cfg, market, asset_kind_map, calib_freq, seed)
@@ -89,7 +116,7 @@ def main() -> None:
                 records = run_walk_forward(
                     predictor, asset_id, kind, horizon, band_cfg,
                     news_provider=news, market_provider=market,
-                    window_start=calib_end, window_end=end,
+                    window_start=scored_start, window_end=scored_end,
                     condition="news_only",
                 )
                 if records.empty:
@@ -107,6 +134,11 @@ def main() -> None:
                 )
 
     df = pd.DataFrame(all_rows)
+    # FDR-adjust the PT p-values across ALL cells (PRD §7.6) so a lone lucky
+    # p-value doesn't read as real skill.
+    from src.backtest.metrics import benjamini_hochberg
+    df["pt_p_fdr"] = benjamini_hochberg(df["pt_p"].tolist())
+
     csv_path = out_dir / "baseline_metrics.csv"
     md_path = out_dir / "baseline_results.md"
     df.to_csv(csv_path, index=False)

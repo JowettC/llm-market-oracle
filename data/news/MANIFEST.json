@@ -1,0 +1,57 @@
+{
+  "source": "GDELT DOC 2.0 artlist (https://api.gdeltproject.org)",
+  "timestamp_field": "seendate (conservative: >= real publication; leakage-safe)",
+  "sort": "hybridrel",
+  "window": {
+    "start": "2026-01-01T00:00:00+00:00",
+    "end": "2026-07-23T00:00:00+00:00"
+  },
+  "chunk_days": 30,
+  "max_records_per_chunk": 250,
+  "fetched_at": "2026-07-24T11:49:41.207093+00:00",
+  "note": "Headlines + metadata only (no bodies). English only, hybridrel sort. 30-day chunks, resumable. Coverage is best-effort under GDELT rate limits; see per-asset distinct_days below.",
+  "assets": {
+    "SPY": {
+      "query": "(\"S&P 500\" OR \"stock market\" OR \"Wall Street\" OR \"Dow Jones\") sourcelang:english",
+      "chunks_cached": 7,
+      "chunks_total": 7,
+      "distinct_days": 197,
+      "quality": {
+        "kept": 1704,
+        "dropped_duplicate": 46,
+        "dropped_future": 0,
+        "dropped_untrusted_ts": 0,
+        "earliest": "2026-01-01T02:15:00+00:00",
+        "latest": "2026-07-23T21:15:00+00:00"
+      }
+    },
+    "BTC": {
+      "query": "bitcoin sourcelang:english",
+      "chunks_cached": 7,
+      "chunks_total": 7,
+      "distinct_days": 175,
+      "quality": {
+        "kept": 1689,
+        "dropped_duplicate": 61,
+        "dropped_future": 0,
+        "dropped_untrusted_ts": 0,
+        "earliest": "2026-01-01T02:45:00+00:00",
+        "latest": "2026-07-23T22:15:00+00:00"
+      }
+    },
+    "ETH": {
+      "query": "ethereum sourcelang:english",
+      "chunks_cached": 7,
+      "chunks_total": 7,
+      "distinct_days": 199,
+      "quality": {
+        "kept": 1713,
+        "dropped_duplicate": 37,
+        "dropped_future": 0,
+        "dropped_untrusted_ts": 0,
+        "earliest": "2026-01-01T01:00:00+00:00",
+        "latest": "2026-07-23T23:00:00+00:00"
+      }
+    }
+  }
+}

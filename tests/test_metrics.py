@@ -78,6 +78,24 @@ def test_cagr_doubling_in_one_year():
     assert abs(M.cagr(eq, 252) - 1.0) < 0.05
 
 
+def test_benjamini_hochberg_basics():
+    # a lone small p among many nulls should be pulled up above 0.05.
+    pvals = [0.007] + [0.5] * 20
+    q = M.benjamini_hochberg(pvals)
+    assert q[0] > 0.05, "lone lucky p should not survive FDR across 21 cells"
+    # all-significant stays significant
+    q2 = M.benjamini_hochberg([0.0001, 0.0002, 0.0003])
+    assert all(x < 0.05 for x in q2)
+    # NaNs pass through and are excluded from the denominator
+    q3 = M.benjamini_hochberg([0.01, float("nan"), 0.02])
+    assert np.isnan(q3[1])
+    assert q3[0] <= 1.0 and q3[2] <= 1.0
+    # q-values are monotonic in p order
+    q4 = M.benjamini_hochberg([0.001, 0.01, 0.04, 0.2])
+    ordered = [q4[i] for i in sorted(range(4), key=lambda i: [0.001,0.01,0.04,0.2][i])]
+    assert all(ordered[i] <= ordered[i+1] + 1e-12 for i in range(len(ordered)-1))
+
+
 def test_newey_west_var_positive():
     rng = np.random.default_rng(1)
     x = rng.normal(0, 1, 100)

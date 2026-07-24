@@ -26,6 +26,7 @@ cache/
 
 # ---- Large news corpora (committed via pointers/LFS, not raw) ----
 data/news/raw/
+data/news/.cache/
 data/news/*.parquet
 data/news/*.jsonl.gz
 

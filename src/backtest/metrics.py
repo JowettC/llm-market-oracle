@@ -164,6 +164,29 @@ def zero_one_loss(pred: list[str], actual: list[str]) -> list[float]:
     return [0.0 if p == a else 1.0 for p, a in zip(pred, actual)]
 
 
+def benjamini_hochberg(pvalues: list[float]) -> list[float]:
+    """Benjamini-Hochberg FDR-adjusted q-values (PRD §7.6).
+
+    Controls the false-discovery rate across the many asset×horizon×model cells,
+    so a lone lucky p-value (e.g. a random baseline at p≈0.007 among 21 cells)
+    does not read as a real discovery. NaN inputs pass through as NaN and are
+    excluded from the correction's denominator.
+    """
+    idx = [i for i, p in enumerate(pvalues) if p is not None and not (isinstance(p, float) and np.isnan(p))]
+    m = len(idx)
+    q = [float("nan")] * len(pvalues)
+    if m == 0:
+        return q
+    order = sorted(idx, key=lambda i: pvalues[i])
+    prev = 1.0
+    for rank in range(m, 0, -1):           # walk from largest p to smallest
+        i = order[rank - 1]
+        adj = pvalues[i] * m / rank
+        prev = min(prev, adj)              # enforce monotonic non-decreasing q
+        q[i] = min(prev, 1.0)
+    return q
+
+
 # --------------------------------------------------------------------------- #
 # Economic metrics (PRD §10.2, Appendix B)
 # --------------------------------------------------------------------------- #

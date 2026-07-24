@@ -47,7 +47,7 @@ def equity_curve_figure(
 
     ax.axhline(1.0, color="grey", linewidth=0.6, alpha=0.6)
     ax.set_title(f"{asset_id} · {horizon} — net-of-cost equity vs. buy & hold "
-                 f"(SYNTHETIC sample data)")
+                 f"(real prices + real GDELT news)")
     ax.set_ylabel("equity (start = 1.0)")
     ax.set_xlabel("entry date")
     ax.legend(loc="best", fontsize=8, ncol=2)

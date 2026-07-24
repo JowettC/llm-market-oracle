@@ -95,10 +95,14 @@ def test_untrusted_timestamp_dropped(tmp_path):
 
 
 def test_real_sample_corpus_is_gated():
-    """End-to-end over the committed sample data: nothing at/after as_of leaks."""
+    """End-to-end over the committed corpus: nothing at/after as_of leaks.
+
+    Probes a date inside the real GDELT news window (2026) so the gate is
+    exercised against actual committed news, not just prices.
+    """
     news = JSONLNewsProvider()
     market = CSVMarketProvider()
-    as_of = pd.Timestamp("2025-03-10T21:00:00Z")
+    as_of = pd.Timestamp("2026-05-01T21:00:00Z")
     for asset in ("SPY", "BTC", "ETH"):
         ctx = assemble_context(
             as_of, asset, "daily", news_provider=news,

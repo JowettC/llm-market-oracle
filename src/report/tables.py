@@ -34,9 +34,10 @@ def results_markdown(df: pd.DataFrame, note: str = "") -> str:
     lines.append(
         "Committed baseline results — the **market-performance bar** the LLM is "
         "measured against (PRD §7.4, §8.4). All economic figures are **net of "
-        "transaction costs** with next-bar execution lag. `PT p` is the "
-        "one-sided Pesaran-Timmermann market-timing p-value "
-        "(`*` <0.10, `**` <0.05, `***` <0.01).\n"
+        "transaction costs** with next-bar execution lag. `PT p` is the raw "
+        "one-sided Pesaran-Timmermann market-timing p-value; **`PT q (FDR)` is the "
+        "Benjamini-Hochberg-adjusted value across all cells, and the stars reflect "
+        "`q`, not raw `p`** (`*` <0.10, `**` <0.05, `***` <0.01).\n"
     )
     if note:
         lines.append(f"> {note}\n")
@@ -47,6 +48,7 @@ def results_markdown(df: pd.DataFrame, note: str = "") -> str:
         ("accuracy", "Acc", {"pct": True}),
         ("pt_hit_rate", "Hit", {"pct": True}),
         ("pt_p", "PT p", {"nd": 3}),
+        ("pt_p_fdr", "PT q (FDR)", {"nd": 3}),
         ("brier", "Brier", {"nd": 3}),
         ("sharpe", "Sharpe", {"nd": 2}),
         ("sortino", "Sortino", {"nd": 2}),
@@ -67,16 +69,22 @@ def results_markdown(df: pd.DataFrame, note: str = "") -> str:
             cells = []
             for key, _label, opts in cols:
                 val = _fmt(row[key], **opts)
-                if key == "pt_p":
-                    val = val + _sig(row["pt_p"])
+                if key == "pt_p_fdr":
+                    val = val + _sig(row.get("pt_p_fdr"))  # stars reflect FDR-adjusted q
                 cells.append(val)
             lines.append("| " + " | ".join(cells) + " |")
 
     lines.append(
-        "\n---\n*Note:* the committed `data/` corpus is **synthetic sample data** "
-        "with no real predictive signal, so baselines should hover near chance "
-        "here by construction — this table proves the engine runs end-to-end and "
-        "establishes the reporting format. Real snapshots replace the samples in "
-        "later phases.\n"
+        "\n---\n"
+        "*Data:* **real** prices (SPY via Yahoo, BTC/ETH via Binance) and **real** "
+        "point-in-time news (GDELT, leakage-safe `seendate`; see "
+        "`data/news/MANIFEST.json`). Scored on the news-aligned clean window. These "
+        "are baselines only — the market bar the LLM must beat; no LLM has run yet.\n\n"
+        "*Why the FDR column matters.* Across many asset×horizon×model cells, ~1 in "
+        "20 will look significant by pure chance. Here a **random** baseline lands at "
+        "raw `p≈0.007` on SPY·daily — a textbook false positive (≈1.1 expected across "
+        "the 21 testable cells). After the Benjamini-Hochberg correction its `q` rises "
+        "well above 0.05 and it **loses its stars** — which is the point: headline "
+        "claims must survive FDR, not a lone raw p-value (PRD §7.6).\n"
     )
     return "\n".join(lines)

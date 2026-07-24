@@ -1,97 +1,99 @@
 # Baseline backtest results
 
-Committed baseline results — the **market-performance bar** the LLM is measured against (PRD §7.4, §8.4). All economic figures are **net of transaction costs** with next-bar execution lag. `PT p` is the one-sided Pesaran-Timmermann market-timing p-value (`*` <0.10, `**` <0.05, `***` <0.01).
+Committed baseline results — the **market-performance bar** the LLM is measured against (PRD §7.4, §8.4). All economic figures are **net of transaction costs** with next-bar execution lag. `PT p` is the raw one-sided Pesaran-Timmermann market-timing p-value; **`PT q (FDR)` is the Benjamini-Hochberg-adjusted value across all cells, and the stars reflect `q`, not raw `p`** (`*` <0.10, `**` <0.05, `***` <0.01).
 
 
 ## SPY · daily  (high — primary)
 
-| Model | N | Acc | Hit | PT p | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline_always_up | 437 | 33.41% | 57.25% | — | 0.708 | 0.90 | 0.89 | -19.00% | 15.05% | 0.91 | 15.08% |
-| baseline_buy_hold | 437 | 33.41% | 57.25% | — | 0.708 | 0.90 | 0.89 | -19.00% | 15.05% | 0.91 | 15.08% |
-| baseline_random | 437 | 36.38% | 46.56% | 0.913 | 0.662 | -0.46 | -0.46 | -12.98% | -5.62% | 0.91 | 15.08% |
-| baseline_momentum | 437 | 30.21% | 51.76% | 0.332 | 0.746 | -1.19 | -1.04 | -41.84% | -19.60% | 0.91 | 15.08% |
-| baseline_sentiment | 437 | 29.06% | 42.27% | 0.879 | 0.777 | -0.94 | -0.94 | -29.28% | -15.26% | 0.91 | 15.08% |
+| Model | N | Acc | Hit | PT p | PT q (FDR) | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_always_up | 138 | 35.51% | 59.04% | — | — | 0.697 | 0.99 | 1.01 | -9.13% | 12.67% | 1.01 | 12.77% |
+| baseline_buy_hold | 138 | 35.51% | 59.04% | — | — | 0.697 | 0.99 | 1.01 | -9.13% | 12.67% | 1.01 | 12.77% |
+| baseline_random | 138 | 41.30% | 67.31% | 0.007 | 0.143 | 0.662 | -0.66 | -0.70 | -10.15% | -7.49% | 1.01 | 12.77% |
+| baseline_momentum | 138 | 25.36% | 42.17% | 0.936 | 1.000 | 0.779 | -0.13 | -0.12 | -13.54% | -1.56% | 1.01 | 12.77% |
+| baseline_sentiment | 138 | 35.51% | 59.04% | — | — | 0.823 | 0.99 | 1.01 | -9.13% | 12.67% | 1.01 | 12.77% |
 
 ## SPY · weekly  (medium)
 
-| Model | N | Acc | Hit | PT p | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline_always_up | 433 | 36.72% | 58.67% | — | 0.691 | 1.14 | 1.09 | -14.06% | 16.53% | 1.15 | 16.57% |
-| baseline_buy_hold | 433 | 36.72% | 58.67% | — | 0.691 | 1.14 | 1.09 | -14.06% | 16.53% | 1.15 | 16.57% |
-| baseline_random | 433 | 33.26% | 51.66% | 0.729 | 0.672 | -0.42 | -0.40 | -16.48% | -5.03% | 1.15 | 16.57% |
-| baseline_momentum | 433 | 29.56% | 47.23% | 0.867 | 0.797 | -0.36 | -0.35 | -21.92% | -5.95% | 1.15 | 16.57% |
-| baseline_sentiment | 433 | 24.48% | 37.50% | 0.987 | 0.792 | -1.22 | -1.13 | -28.34% | -15.63% | 1.15 | 16.57% |
+| Model | N | Acc | Hit | PT p | PT q (FDR) | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_always_up | 134 | 34.33% | 54.76% | — | — | 0.703 | 1.41 | 1.66 | -5.79% | 15.75% | 1.43 | 15.87% |
+| baseline_buy_hold | 134 | 34.33% | 54.76% | — | — | 0.703 | 1.41 | 1.66 | -5.79% | 15.75% | 1.43 | 15.87% |
+| baseline_random | 134 | 30.60% | 48.00% | 0.721 | 1.000 | 0.667 | -1.88 | -1.77 | -8.50% | -14.47% | 1.43 | 15.87% |
+| baseline_momentum | 134 | 29.10% | 46.43% | 0.766 | 1.000 | 0.779 | -0.13 | -0.13 | -6.64% | -0.14% | 1.43 | 15.87% |
+| baseline_sentiment | 134 | 34.33% | 54.76% | — | — | 0.871 | 1.41 | 1.66 | -5.79% | 15.75% | 1.43 | 15.87% |
 
 ## SPY · monthly  (LOW — exploratory only)
 
-| Model | N | Acc | Hit | PT p | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline_always_up | 417 | 41.49% | 67.05% | — | 0.668 | 1.08 | 1.27 | -9.12% | 15.56% | 1.08 | 15.59% |
-| baseline_buy_hold | 417 | 41.49% | 67.05% | — | 0.668 | 1.08 | 1.27 | -9.12% | 15.56% | 1.08 | 15.59% |
-| baseline_random | 417 | 39.33% | 66.22% | — | 0.689 | 0.47 | 0.53 | -10.61% | 5.26% | 1.08 | 15.59% |
-| baseline_momentum | 417 | 37.17% | 60.08% | 0.046 ** | 0.782 | -0.11 | -0.09 | -23.21% | -4.80% | 1.08 | 15.59% |
-| baseline_sentiment | 417 | 20.38% | 27.44% | 1.000 | 0.829 | -0.97 | -0.82 | -27.10% | -14.67% | 1.08 | 15.59% |
+| Model | N | Acc | Hit | PT p | PT q (FDR) | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_always_up | 118 | 34.75% | 56.94% | — | — | 0.701 | 0.99 | 3.05 | -3.93% | 21.83% | 1.00 | 21.97% |
+| baseline_buy_hold | 118 | 34.75% | 56.94% | — | — | 0.701 | 0.99 | 3.05 | -3.93% | 21.83% | 1.00 | 21.97% |
+| baseline_random | 118 | 42.37% | 57.14% | 0.413 | 1.000 | 0.781 | 1.23 | 4.70 | -0.05% | 0.98% | 1.00 | 21.97% |
+| baseline_momentum | 118 | 27.97% | 45.83% | 0.784 | 1.000 | 0.877 | -1.22 | -0.90 | -11.49% | -22.81% | 1.00 | 21.97% |
+| baseline_sentiment | 118 | 34.75% | 56.94% | — | — | 0.903 | 0.99 | 3.05 | -3.93% | 21.83% | 1.00 | 21.97% |
 
 ## BTC · daily  (high — primary)
 
-| Model | N | Acc | Hit | PT p | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline_always_up | 909 | 27.94% | 51.11% | — | 0.735 | 0.50 | 0.53 | -52.97% | 11.94% | 0.50 | 11.99% |
-| baseline_buy_hold | 909 | 27.94% | 51.11% | — | 0.735 | 0.50 | 0.53 | -52.97% | 11.94% | 0.50 | 11.99% |
-| baseline_random | 909 | 36.08% | 45.75% | 0.934 | 0.656 | -0.38 | -0.40 | -52.93% | -14.57% | 0.50 | 11.99% |
-| baseline_momentum | 909 | 26.62% | 48.69% | 0.721 | 0.821 | -1.40 | -1.40 | -93.64% | -47.32% | 0.50 | 11.99% |
-| baseline_sentiment | 909 | 34.65% | 49.84% | 0.804 | 0.733 | 0.05 | 0.04 | -46.98% | -2.52% | 0.50 | 11.99% |
+| Model | N | Acc | Hit | PT p | PT q (FDR) | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_always_up | 203 | 25.62% | 46.85% | — | — | 0.747 | -0.86 | -0.86 | -39.53% | -34.90% | -0.85 | -34.78% |
+| baseline_buy_hold | 203 | 25.62% | 46.85% | — | — | 0.747 | -0.86 | -0.86 | -39.53% | -34.90% | -0.85 | -34.78% |
+| baseline_random | 203 | 29.56% | 48.44% | 0.764 | 1.000 | 0.667 | -1.35 | -1.34 | -43.05% | -40.97% | -0.85 | -34.78% |
+| baseline_momentum | 203 | 24.14% | 44.14% | 0.901 | 1.000 | 0.845 | -3.21 | -2.74 | -67.39% | -74.35% | -0.85 | -34.78% |
+| baseline_sentiment | 203 | 24.63% | 43.81% | 0.934 | 1.000 | 0.801 | -2.20 | -1.95 | -53.98% | -60.41% | -0.85 | -34.78% |
 
 ## BTC · weekly  (medium)
 
-| Model | N | Acc | Hit | PT p | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline_always_up | 903 | 31.67% | 53.06% | — | 0.717 | 0.61 | 0.68 | -51.75% | 18.47% | 0.61 | 18.54% |
-| baseline_buy_hold | 903 | 31.67% | 53.06% | — | 0.717 | 0.61 | 0.68 | -51.75% | 18.47% | 0.61 | 18.54% |
-| baseline_random | 903 | 36.21% | 56.97% | 0.029 ** | 0.664 | 0.94 | 1.28 | -28.87% | 33.48% | 0.61 | 18.54% |
-| baseline_momentum | 903 | 30.12% | 50.46% | 0.430 | 0.943 | 0.46 | 0.49 | -43.78% | 10.80% | 0.61 | 18.54% |
-| baseline_sentiment | 903 | 32.89% | 48.48% | 0.944 | 0.727 | 0.22 | 0.17 | -39.16% | 2.00% | 0.61 | 18.54% |
+| Model | N | Acc | Hit | PT p | PT q (FDR) | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_always_up | 197 | 30.46% | 48.00% | — | — | 0.723 | -1.25 | -1.02 | -36.91% | -47.55% | -1.24 | -47.40% |
+| baseline_buy_hold | 197 | 30.46% | 48.00% | — | — | 0.723 | -1.25 | -1.02 | -36.91% | -47.55% | -1.24 | -47.40% |
+| baseline_random | 197 | 32.49% | 55.07% | 0.283 | 1.000 | 0.673 | 2.47 | 3.58 | -13.96% | 139.28% | -1.24 | -47.40% |
+| baseline_momentum | 197 | 36.04% | 56.80% | 0.068 | 0.716 | 0.870 | 1.70 | 2.35 | -10.72% | 92.05% | -1.24 | -47.40% |
+| baseline_sentiment | 197 | 17.26% | 25.21% | 1.000 | 1.000 | 0.860 | -4.14 | -3.20 | -58.12% | -81.29% | -1.24 | -47.40% |
 
 ## BTC · monthly  (LOW — exploratory only)
 
-| Model | N | Acc | Hit | PT p | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline_always_up | 880 | 30.11% | 53.11% | — | 0.724 | 0.56 | 0.73 | -45.70% | 4.70% | 0.56 | 4.77% |
-| baseline_buy_hold | 880 | 30.11% | 53.11% | — | 0.724 | 0.56 | 0.73 | -45.70% | 4.70% | 0.56 | 4.77% |
-| baseline_random | 880 | 35.91% | 53.28% | 0.308 | 0.686 | 1.03 | 1.70 | -15.34% | 40.76% | 0.56 | 4.77% |
-| baseline_momentum | 880 | 27.27% | 48.10% | 0.871 | 1.106 | -0.66 | -0.78 | -63.50% | -27.32% | 0.56 | 4.77% |
-| baseline_sentiment | 880 | 34.32% | 52.19% | 1.000 | 0.731 | 0.08 | 0.07 | -39.48% | -2.07% | 0.56 | 4.77% |
+| Model | N | Acc | Hit | PT p | PT q (FDR) | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_always_up | 174 | 16.67% | 30.21% | — | — | 0.792 | -1.70 | -1.84 | -21.94% | -44.82% | -1.68 | -44.61% |
+| baseline_buy_hold | 174 | 16.67% | 30.21% | — | — | 0.792 | -1.70 | -1.84 | -21.94% | -44.82% | -1.68 | -44.61% |
+| baseline_random | 174 | 38.51% | 62.71% | 0.731 | 1.000 | 0.684 | -0.15 | -0.12 | -17.48% | -12.07% | -1.68 | -44.61% |
+| baseline_momentum | 174 | 25.29% | 45.83% | 0.395 | 1.000 | 1.168 | 0.14 | 0.11 | -30.00% | -27.85% | -1.68 | -44.61% |
+| baseline_sentiment | 174 | 1.72% | 2.30% | 1.000 | 1.000 | 0.943 | -2.52 | -1.84 | -36.14% | -65.92% | -1.68 | -44.61% |
 
 ## ETH · daily  (high — primary)
 
-| Model | N | Acc | Hit | PT p | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline_always_up | 909 | 25.63% | 49.57% | — | 0.747 | 0.20 | 0.20 | -67.55% | -5.59% | 0.20 | -5.55% |
-| baseline_buy_hold | 909 | 25.63% | 49.57% | — | 0.747 | 0.20 | 0.20 | -67.55% | -5.59% | 0.20 | -5.55% |
-| baseline_random | 909 | 37.29% | 49.19% | 0.607 | 0.648 | -0.25 | -0.26 | -70.90% | -17.80% | 0.20 | -5.55% |
-| baseline_momentum | 909 | 25.41% | 49.15% | 0.643 | 0.877 | -0.78 | -0.79 | -93.58% | -46.17% | 0.20 | -5.55% |
-| baseline_sentiment | 909 | 33.00% | 47.06% | 0.533 | 0.748 | -0.22 | -0.18 | -67.55% | -19.18% | 0.20 | -5.55% |
+| Model | N | Acc | Hit | PT p | PT q (FDR) | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_always_up | 203 | 23.65% | 43.64% | — | — | 0.757 | -0.93 | -0.90 | -53.27% | -47.39% | -0.92 | -47.29% |
+| baseline_buy_hold | 203 | 23.65% | 43.64% | — | — | 0.757 | -0.93 | -0.90 | -53.27% | -47.39% | -0.92 | -47.29% |
+| baseline_random | 203 | 33.00% | 50.00% | 0.566 | 1.000 | 0.667 | -1.77 | -1.67 | -52.67% | -58.10% | -0.92 | -47.29% |
+| baseline_momentum | 203 | 25.12% | 46.36% | 0.765 | 1.000 | 0.882 | -2.71 | -2.49 | -73.32% | -79.68% | -0.92 | -47.29% |
+| baseline_sentiment | 203 | 23.65% | 43.64% | — | — | 0.964 | -0.93 | -0.90 | -53.27% | -47.39% | -0.92 | -47.29% |
 
 ## ETH · weekly  (medium)
 
-| Model | N | Acc | Hit | PT p | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline_always_up | 903 | 27.24% | 48.43% | — | 0.739 | 0.22 | 0.25 | -67.11% | -7.91% | 0.22 | -7.85% |
-| baseline_buy_hold | 903 | 27.24% | 48.43% | — | 0.739 | 0.22 | 0.25 | -67.11% | -7.91% | 0.22 | -7.85% |
-| baseline_random | 903 | 36.77% | 56.39% | 0.012 ** | 0.661 | 0.45 | 0.52 | -38.22% | 10.90% | 0.22 | -7.85% |
-| baseline_momentum | 903 | 29.68% | 52.76% | 0.097 * | 1.013 | 1.53 | 1.95 | -43.73% | 127.57% | 0.22 | -7.85% |
-| baseline_sentiment | 903 | 30.23% | 43.42% | 0.790 | 0.750 | -0.06 | -0.06 | -67.11% | -16.17% | 0.22 | -7.85% |
+| Model | N | Acc | Hit | PT p | PT q (FDR) | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_always_up | 197 | 22.34% | 40.74% | — | — | 0.763 | -1.35 | -1.19 | -52.59% | -62.30% | -1.34 | -62.20% |
+| baseline_buy_hold | 197 | 22.34% | 40.74% | — | — | 0.763 | -1.35 | -1.19 | -52.59% | -62.30% | -1.34 | -62.20% |
+| baseline_random | 197 | 37.56% | 56.60% | 0.257 | 1.000 | 0.662 | 2.19 | 3.14 | -16.64% | 137.50% | -1.34 | -62.20% |
+| baseline_momentum | 197 | 28.93% | 52.78% | 0.368 | 1.000 | 0.995 | 0.05 | 0.06 | -30.12% | -10.71% | -1.34 | -62.20% |
+| baseline_sentiment | 197 | 22.34% | 40.74% | — | — | 0.986 | -1.35 | -1.19 | -52.59% | -62.30% | -1.34 | -62.20% |
 
 ## ETH · monthly  (LOW — exploratory only)
 
-| Model | N | Acc | Hit | PT p | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline_always_up | 880 | 26.25% | 44.34% | — | 0.744 | 0.25 | 0.36 | -59.88% | -20.51% | 0.25 | -20.46% |
-| baseline_buy_hold | 880 | 26.25% | 44.34% | — | 0.744 | 0.25 | 0.36 | -59.88% | -20.51% | 0.25 | -20.46% |
-| baseline_random | 880 | 34.43% | 47.84% | — | 0.700 | 1.05 | 2.19 | -25.99% | 63.99% | 0.25 | -20.46% |
-| baseline_momentum | 880 | 33.64% | 56.81% | 0.003 *** | 1.059 | -0.54 | -0.41 | -91.06% | -48.02% | 0.25 | -20.46% |
-| baseline_sentiment | 880 | 30.91% | 38.70% | 0.041 ** | 0.747 | -0.02 | -0.02 | -59.88% | -20.57% | 0.25 | -20.46% |
+| Model | N | Acc | Hit | PT p | PT q (FDR) | Brier | Sharpe | Sortino | MaxDD | CAGR | B&H Sharpe | B&H CAGR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_always_up | 174 | 14.37% | 25.00% | — | — | 0.803 | -2.30 | -1.99 | -27.66% | -54.03% | -2.30 | -53.85% |
+| baseline_buy_hold | 174 | 14.37% | 25.00% | — | — | 0.803 | -2.30 | -1.99 | -27.66% | -54.03% | -2.30 | -53.85% |
+| baseline_random | 174 | 35.06% | 60.00% | 0.727 | 1.000 | 0.705 | -1.43 | -0.83 | -13.37% | -29.14% | -2.30 | -53.85% |
+| baseline_momentum | 174 | 26.44% | 46.00% | 0.719 | 1.000 | 1.183 | -0.41 | -0.30 | -19.93% | 26.16% | -2.30 | -53.85% |
+| baseline_sentiment | 174 | 14.37% | 25.00% | — | — | 1.097 | -2.30 | -1.99 | -27.66% | -54.03% | -2.30 | -53.85% |
 
 ---
-*Note:* the committed `data/` corpus is **synthetic sample data** with no real predictive signal, so baselines should hover near chance here by construction — this table proves the engine runs end-to-end and establishes the reporting format. Real snapshots replace the samples in later phases.
+*Data:* **real** prices (SPY via Yahoo, BTC/ETH via Binance) and **real** point-in-time news (GDELT, leakage-safe `seendate`; see `data/news/MANIFEST.json`). Scored on the news-aligned clean window. These are baselines only — the market bar the LLM must beat; no LLM has run yet.
+
+*Why the FDR column matters.* Across many asset×horizon×model cells, ~1 in 20 will look significant by pure chance. Here a **random** baseline lands at raw `p≈0.007` on SPY·daily — a textbook false positive (≈1.1 expected across the 21 testable cells). After the Benjamini-Hochberg correction its `q` rises well above 0.05 and it **loses its stars** — which is the point: headline claims must survive FDR, not a lone raw p-value (PRD §7.6).

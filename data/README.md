@@ -16,16 +16,18 @@ are dropped (PRD §6.2), the single biggest guard against accidental lookahead.
 | Subtree | Status | Source |
 |---|---|---|
 | `prices/*.csv` | ✅ **REAL** | `python -m scripts.fetch_real_prices` — SPY via Yahoo Finance, BTC/ETH via Binance klines. No API key. |
-| `news/*.jsonl` | ⚠️ **SYNTHETIC** | `python -m scripts.make_sample_data` (`source: "SYNTHETIC_SAMPLE"`) — placeholder pending real ingestion. |
+| `news/*.jsonl` | ✅ **REAL** | `python -m scripts.fetch_real_news` — GDELT DOC 2.0, `seendate` as leakage-safe `published_at`. No API key. Provenance in `MANIFEST.json`. |
 
-**What this means for results right now.** The price-only baselines
-(always-up, buy-and-hold, momentum, random) run on **real market data** and
-their numbers are meaningful. The **sentiment** baseline reads the synthetic
-news and is **not** meaningful yet, and the LLM predictors (Phase 3) need the
-real news corpus before their results count.
+**Corpus coverage (clean window 2026-01-01 → 2026-07-23, headlines only):**
+~1,700 items per asset over ~175–199 distinct days — near-complete daily
+coverage. English-only, relevance-sorted, per-asset queries (see `MANIFEST.json`).
+All items are post-cutoff (clean); `scripts/verify_fairness.py` confirms zero
+gate leakage and zero future-dated items.
 
-**Real news is the next step** and the crux of the whole study: every item must
-carry a trustworthy `published_at` and the clean-window dates must fall **after**
-the model's training cutoff (PRD §6.2, §7.2). Planned feeds: GDELT (reachable,
-rate-limited) + Alpha Vantage / CryptoPanic for the clean window; FNSPID for the
-historical (contaminated) window.
+**Both baselines and the (future) LLM now run on real data.** The scored window
+is aligned to the news corpus, with θ/class-frequency calibration on the
+disjoint earlier price history.
+
+**Refreshing / extending:** `fetch_real_news` is resumable (chunk cache under
+`.cache/`, git-ignored) — re-run to widen the window or densify coverage. The
+historical (contaminated) window via FNSPID (PRD §6.2) remains future work.

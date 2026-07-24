@@ -73,10 +73,14 @@ loop in Phase 3.
 python3 -m venv .venv && source .venv/bin/activate
 python -m pip install -e ".[dev]"        # or: pip install -r requirements.lock.txt
 
-python -m scripts.make_sample_data       # regenerate the synthetic sample fixtures
-python -m pytest -q                       # 43 tests incl. the leakage suite
+python -m pytest -q                       # 50 tests incl. leakage + ingestion suites
+python -m scripts.verify_fairness         # audit the committed news corpus for leakage
 python -m src.run                         # baseline sweep -> results/ (md, csv, figures)
 #   python -m src.run --smoke             # daily horizon only (quick)
+
+# refresh the committed real snapshots (network; optional):
+#   python -m scripts.fetch_real_prices   # SPY (Yahoo) + BTC/ETH (Binance), no key
+#   python -m scripts.fetch_real_news     # GDELT corpus, paced (~9 min), no key
 ```
 
 No secrets, no API keys, no network required. The LLM path (Phase 3) runs on a
@@ -92,10 +96,14 @@ src/
   data/                  market + news providers, and assemble_context.py (THE gate)
   predictors/            shared Prediction schema + the five baselines
   labeling.py            up/down/stay neutral-band logic
+  data/gdelt.py          real GDELT news ingestion (leakage-safe seendate)
+  data/quality.py        corpus quality gates: dedup, UTC, future-ts guard
   backtest/              walk-forward engine, portfolio, metrics   (Phase 2)
   probes/                lookahead / memorization probes            (Phase 4)
   report/                tables + plots + results markdown          (Phase 5)
-data/prices, data/news   committed, reproducible snapshots (currently synthetic)
+data/prices              committed REAL snapshots (Yahoo / Binance)
+data/news                committed REAL GDELT corpus + MANIFEST.json provenance
+scripts/                 fetch_real_prices, fetch_real_news, verify_fairness
 tests/                   unit tests, incl. the leakage test that FAILS on leakage
 ```
 
@@ -106,6 +114,16 @@ tests/                   unit tests, incl. the leakage test that FAILS on leakag
 - **One gate for all news.** `src/data/assemble_context.py` is the only path
   news reaches a predictor; it enforces `published_at < as_of` centrally and
   records the exact `news_ids` used, so every prediction is auditable.
+- **Leakage-safe news timestamps.** Real news comes from GDELT, and we use its
+  `seendate` (when GDELT first *observed* the article) as `published_at`. That
+  is always **at or after** real publication, so it can only withhold an article
+  longer than reality — never reveal it early. See `src/data/gdelt.py`.
+- **Quality-gated corpus.** Every fetched item is de-duplicated, forced to UTC,
+  and dropped if its timestamp is after the fetch instant (a physically
+  impossible article). See `src/data/quality.py` and `data/news/MANIFEST.json`.
+- **Auditable in one command.** `python -m scripts.verify_fairness` re-checks the
+  committed corpus for future timestamps, gate leakage, and the clean
+  (post-cutoff) vs. contaminated split — and exits non-zero on any violation.
 - **Post-cutoff clean window** is the only headline. Pre-cutoff runs are labeled
   "contaminated — upper bound" and never blended in.
 - **Strong baselines + significance tests**, not raw accuracy.
