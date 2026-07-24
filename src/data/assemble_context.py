@@ -39,6 +39,7 @@ class PredictionContext:
     price_history: pd.DataFrame | None = None  # only when condition == news_plus_price
     condition: str = "news_only"
     max_news: int | None = None
+    theta: float | None = None  # neutral-band half-width at this bar (for prompts)
 
     @property
     def news_ids(self) -> list[str]:

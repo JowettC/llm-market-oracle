@@ -43,8 +43,8 @@ The honest result may well be humbling — and that's a valid, publishable outco
 | 0. Design sign-off (`PRD.md`) | ✅ |
 | **1. Scaffold + data pipeline + leakage test** | ✅ **done** |
 | **2. Baselines + backtest engine + committed baseline results** | ✅ **done** |
-| 3. LLM harness (Claude Max subscription, no API key) | ⏳ next |
-| 4. Full sweep + robustness + probes | ▫️ |
+| **3. LLM harness (Claude Max subscription, no API key)** | ✅ **done** |
+| 4. Full sweep + robustness + probes | ⏳ next |
 | 5. Analysis + write-up | ▫️ |
 | 6. Public-readiness | ▫️ |
 
@@ -57,8 +57,20 @@ economic lens, the full metrics suite (Pesaran-Timmermann, Diebold-Mariano,
 Brier, Sharpe / Sortino / max-drawdown, Newey-West HAC), and a one-command run
 that produces **committed baseline results** — the market bar the LLM must beat.
 See [`results/baseline_results.md`](results/baseline_results.md) and
-`results/figures/`. The same-interface Claude predictors slot into the identical
-loop in Phase 3.
+`results/figures/`.
+
+Phase 3 ships: the LLM harness — Claude driven through `claude -p` on your
+**Max subscription (no API key)**, the frozen P0–P3 prompt templates, an
+on-disk response cache keyed by `(model, prompt, news_ids)`, usage-limit
+retry/backoff, and a `--dry-run` that reports how many Claude calls a run would
+make before spending any. Claude slots into the exact same walk-forward + scoring
+loop as the baselines. Smoke-tested end-to-end against a live subscription.
+
+```bash
+python -m src.run --dry-run --llm-model claude_opus --smoke   # count calls, make none
+python -m src.run --llm --llm-model claude_opus --smoke \
+    --assets SPY --prompts P0 --llm-limit 5                    # a small real run
+```
 
 > ⚠️ The committed `data/` files are **synthetic samples** (deterministic, from
 > `scripts/make_sample_data.py`) so everything runs offline with no network.
@@ -94,7 +106,8 @@ No secrets, no API keys, no network required. The LLM path (Phase 3) runs on a
 config/experiment.yaml   every knob: assets, horizons, θ band, costs, models, windows
 src/
   data/                  market + news providers, and assemble_context.py (THE gate)
-  predictors/            shared Prediction schema + the five baselines
+  predictors/            shared Prediction schema, five baselines, and the
+                         LLM harness (prompts P0-P3, claude_cli client, cache)
   labeling.py            up/down/stay neutral-band logic
   data/gdelt.py          real GDELT news ingestion (leakage-safe seendate)
   data/quality.py        corpus quality gates: dedup, UTC, future-ts guard
