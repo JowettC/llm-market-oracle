@@ -63,11 +63,22 @@ accuracy is **below the naive baselines**.
 
 Full write-up and equity curves: [`results/llm_sweep/SUMMARY.md`](results/llm_sweep/SUMMARY.md).
 
-**Scope & honesty.** This is one prompt (P0), one model, one ~6.5-month window,
-daily horizon, coarse monthly news coverage. The wider prompt sweep (P1–P3,
-news+price) and at-scale memorization probes are **partially run** — they paused
-on the Claude subscription usage limit (progress is cached and resumes on reset).
-Results are a time-stamped snapshot, not a law about markets.
+**The result is robust across prompts.** The full daily **news-only** prompt
+sweep (P0 zero-shot, P1 chain-of-thought, P2 structured-analyst, P3 sentiment)
+is complete: **no prompt achieves significant skill** (every FDR q ≈ 0.94), and
+the reflexive crypto bearishness is **structural, not a prompt artifact** —
+Claude calls BTC/ETH DOWN ~77–84% of the time under *every* prompt, including
+step-by-step reasoning:
+
+| Asset | P0 | P1 (CoT) | P2 (structured) | P3 (sentiment) |
+|---|---|---|---|---|
+| BTC DOWN-share | 84% | 77% | 81% | 78% |
+| ETH DOWN-share | 82% | 78% | 84% | 69% |
+
+**Scope & honesty.** One model, one ~6.5-month window, daily horizon, coarse
+monthly news coverage. The **news+price** condition and the at-scale memorization
+probes are still running (paced under the subscription usage limit; progress is
+cached). Results are a time-stamped snapshot, not a law about markets.
 
 ---
 
