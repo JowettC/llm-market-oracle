@@ -128,3 +128,8 @@ llm:
   dry_run: false                   # if true, report call count, make no calls
   max_retries: 5
   backoff_seconds: [5, 15, 45, 120, 300]
+  # Client-side usage ceiling (there is NO API to read remaining subscription
+  # quota, §13.4). We meter NEW calls / $ and stop cleanly before this ceiling.
+  # 558 ≈ 90% of the ~620 concentrated calls that tripped the limit on 2026-07-25.
+  budget_calls: 558               # hard cap on NEW Claude calls per run (null = off)
+  budget_usd: null                # optional $ cap (API-equivalent, from CLI envelope)

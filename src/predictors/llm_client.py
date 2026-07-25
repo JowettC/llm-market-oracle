@@ -21,11 +21,44 @@ class LLMUsageLimitError(RuntimeError):
     """Raised when the subscription usage limit is hit (triggers backoff/resume)."""
 
 
+class BudgetExceededError(RuntimeError):
+    """Raised when a self-imposed usage budget (calls or $) would be exceeded.
+
+    We cannot query remaining subscription quota (no CLI/API exposes it), so this
+    is a *client-side* ceiling: we count what we spend and stop before a target
+    the user sets (e.g. 90% of what tripped the limit last time)."""
+
+
+@dataclass
+class UsageBudget:
+    """A local spend meter. ``max_calls`` / ``max_cost_usd`` are hard ceilings on
+    NEW (uncached) Claude calls; either or both may be set (None = unlimited)."""
+
+    max_calls: int | None = None
+    max_cost_usd: float | None = None
+    calls: int = 0
+    cost_usd: float = 0.0
+
+    def check(self) -> None:
+        """Raise if making one more call would cross a ceiling."""
+        if self.max_calls is not None and self.calls >= self.max_calls:
+            raise BudgetExceededError(
+                f"call budget reached: {self.calls}/{self.max_calls} calls")
+        if self.max_cost_usd is not None and self.cost_usd >= self.max_cost_usd:
+            raise BudgetExceededError(
+                f"cost budget reached: ${self.cost_usd:.2f}/${self.max_cost_usd:.2f}")
+
+    def record(self, cost_usd: float) -> None:
+        self.calls += 1
+        self.cost_usd += float(cost_usd or 0.0)
+
+
 @dataclass
 class LLMResponse:
     text: str          # the model's raw text (expected to be our JSON contract)
     model: str = ""
     raw: dict | None = None
+    cost_usd: float = 0.0   # this call's API-equivalent cost, from the CLI envelope
 
 
 class LLMClient(ABC):
@@ -74,7 +107,8 @@ class ClaudeCLIClient(LLMClient):
                 raise LLMUsageLimitError(msg[:200])
             raise RuntimeError(f"claude returned is_error: {msg[:200]}")
         model_used = next(iter(envelope.get("modelUsage", {})), model)
-        return LLMResponse(text=str(envelope.get("result", "")), model=model_used, raw=envelope)
+        return LLMResponse(text=str(envelope.get("result", "")), model=model_used,
+                           raw=envelope, cost_usd=float(envelope.get("total_cost_usd", 0.0) or 0.0))
 
 
 class MockLLMClient(LLMClient):

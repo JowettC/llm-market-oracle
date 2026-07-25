@@ -28,7 +28,12 @@ from src.predictors.baselines import (
     RandomStratifiedPredictor,
     estimate_class_freq,
 )
-from src.predictors.llm_client import ClaudeCLIClient, LLMUsageLimitError
+from src.predictors.llm_client import (
+    BudgetExceededError,
+    ClaudeCLIClient,
+    LLMUsageLimitError,
+    UsageBudget,
+)
 from src.predictors.llm_predictor import LLMPredictor
 from src.predictors.response_cache import ResponseCache
 from src.report.plots import equity_curve_figure
@@ -37,12 +42,13 @@ from src.report.tables import results_markdown
 from src.backtest.walk_forward import iter_decision_contexts, run_walk_forward
 
 
-def build_llm_predictors(cfg, cache, prompts, model_filter):
+def build_llm_predictors(cfg, cache, prompts, model_filter, budget=None):
     """Instantiate LLMPredictors for enabled Claude models × prompt variants.
 
     Runs on the Claude Max subscription via `claude -p` (no API key, §13.4).
     An LLM model is included if config marks it enabled, or if named in
-    ``model_filter`` (e.g. from --llm-model on the CLI).
+    ``model_filter`` (e.g. from --llm-model on the CLI). All predictors share the
+    one ``budget`` meter so the whole run stops at a single ceiling.
     """
     llm_cfg = cfg.get("llm", {})
     client = ClaudeCLIClient()
@@ -58,6 +64,7 @@ def build_llm_predictors(cfg, cache, prompts, model_filter):
                 model_id=f"{m['id']}:{p}",
                 max_retries=int(llm_cfg.get("max_retries", 5)),
                 backoff_seconds=llm_cfg.get("backoff_seconds"),
+                budget=budget,
             ))
     return preds
 
@@ -135,6 +142,10 @@ def main() -> None:
     ap.add_argument("--llm-max-news", type=int, default=40, help="cap news items per LLM prompt")
     ap.add_argument("--llm-limit", type=int, default=None,
                     help="cap decisions per LLM cell (cheap smoke run)")
+    ap.add_argument("--budget-calls", type=int, default=None,
+                    help="hard ceiling on NEW Claude calls this run (usage-limit safety)")
+    ap.add_argument("--budget-usd", type=float, default=None,
+                    help="hard ceiling on API-equivalent $ spend this run")
     args = ap.parse_args()
 
     cfg = load_config(args.config)
@@ -151,7 +162,14 @@ def main() -> None:
     prompts = args.prompts or cfg.get("prompts", ["P0"])
     conditions = args.conditions or cfg.get("conditions", ["news_only"])
     cache = ResponseCache(cfg.get("llm", {}).get("cache_dir", "cache/llm"))
-    llm_predictors = build_llm_predictors(cfg, cache, prompts, args.llm_model) if (args.llm or args.dry_run) else []
+    llm_cfg = cfg.get("llm", {})
+    budget_calls = args.budget_calls if args.budget_calls is not None else llm_cfg.get("budget_calls")
+    budget_usd = args.budget_usd if args.budget_usd is not None else llm_cfg.get("budget_usd")
+    budget = UsageBudget(max_calls=budget_calls, max_cost_usd=budget_usd) \
+        if (budget_calls or budget_usd) else None
+    if budget is not None:
+        print(f"# usage budget: max_calls={budget.max_calls} max_cost_usd={budget.max_cost_usd}")
+    llm_predictors = build_llm_predictors(cfg, cache, prompts, args.llm_model, budget) if (args.llm or args.dry_run) else []
     dry_total_calls = 0
     usage_limit_hit = False
 
@@ -211,10 +229,11 @@ def main() -> None:
                             condition=condition, max_news=args.llm_max_news,
                             max_decisions=args.llm_limit,
                         )
-                    except LLMUsageLimitError as e:
-                        print(f"\n⚠️  Claude usage limit reached at {cell} — stopping LLM "
-                              f"runs and saving partial results (cache preserves progress; "
-                              f"resume after reset). {str(e)[:120]}")
+                    except (LLMUsageLimitError, BudgetExceededError) as e:
+                        why = ("usage budget reached" if isinstance(e, BudgetExceededError)
+                               else "Claude usage limit reached")
+                        print(f"\n⚠️  {why} at {cell} — stopping LLM runs and saving partial "
+                              f"results (cache preserves progress; resume later). {str(e)[:120]}")
                         usage_limit_hit = True
                         break
                     if records.empty:
@@ -256,6 +275,10 @@ def main() -> None:
     md_path = out_dir / "baseline_results.md"
     df.to_csv(csv_path, index=False)
     md_path.write_text(results_markdown(df), encoding="utf-8")
+    if budget is not None:
+        print(f"# usage this run: {budget.calls} new Claude calls, "
+              f"~${budget.cost_usd:.2f} API-equivalent"
+              + (" — STOPPED AT BUDGET" if usage_limit_hit else ""))
     print(f"\nwrote {csv_path} and {md_path}")
     print(f"{len(df)} cells scored across {df['asset'].nunique()} assets × "
           f"{df['horizon'].nunique()} horizons")

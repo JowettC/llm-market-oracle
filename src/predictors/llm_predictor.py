@@ -14,7 +14,7 @@ import time
 
 from src.data.assemble_context import PredictionContext
 from src.predictors.base import Prediction, Predictor, prediction_from_label
-from src.predictors.llm_client import LLMClient, LLMUsageLimitError
+from src.predictors.llm_client import LLMClient, LLMUsageLimitError, UsageBudget
 from src.predictors.prompts import render
 from src.predictors.response_cache import ResponseCache
 from src.labeling import DOWN, LABELS, STAY, UP
@@ -32,6 +32,7 @@ class LLMPredictor(Predictor):
         model_id: str | None = None,
         max_retries: int = 5,
         backoff_seconds: list[int] | None = None,
+        budget: UsageBudget | None = None,
     ):
         self.client = client
         self.model_string = model_string
@@ -40,6 +41,7 @@ class LLMPredictor(Predictor):
         self.model_id = model_id or f"llm:{model_string}:{prompt_id}"
         self.max_retries = max_retries
         self.backoff_seconds = backoff_seconds or [5, 15, 45, 120, 300]
+        self.budget = budget  # shared across predictors so one run has one meter
 
     # -- prompt / cache helpers (used by the dry-run estimator too) --
     def render(self, context: PredictionContext) -> tuple[str, str]:
@@ -58,15 +60,20 @@ class LLMPredictor(Predictor):
         key = self.cache.key(self.model_string, system, user, context.news_ids)
         text = self.cache.get(key)
         if text is None:
-            text = self._call_with_backoff(system, user)
+            if self.budget is not None:
+                self.budget.check()  # raises BudgetExceededError before we spend
+            resp = self._call_with_backoff(system, user)
+            if self.budget is not None:
+                self.budget.record(resp.cost_usd)
+            text = resp.text
             self.cache.put(key, text, meta={"model": self.model_string, "prompt": self.prompt_id})
         return self._to_prediction(text, context)
 
-    def _call_with_backoff(self, system: str, user: str) -> str:
+    def _call_with_backoff(self, system: str, user: str):
         last: Exception | None = None
         for attempt in range(self.max_retries + 1):
             try:
-                return self.client.complete(system, user, self.model_string).text
+                return self.client.complete(system, user, self.model_string)
             except LLMUsageLimitError as e:
                 last = e
                 if attempt < self.max_retries:

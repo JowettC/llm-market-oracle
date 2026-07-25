@@ -12,7 +12,12 @@ import pytest
 
 from src.data.assemble_context import PredictionContext
 from src.data.news_providers import NewsItem
-from src.predictors.llm_client import LLMUsageLimitError, MockLLMClient
+from src.predictors.llm_client import (
+    BudgetExceededError,
+    LLMUsageLimitError,
+    MockLLMClient,
+    UsageBudget,
+)
 from src.predictors.llm_predictor import LLMPredictor, parse_model_json
 from src.predictors.prompts import RESPONSE_CONTRACT, render
 from src.predictors.response_cache import ResponseCache
@@ -101,6 +106,30 @@ def test_is_cached_reflects_state(tmp_path):
     assert not lp.is_cached(ctx)   # dry-run would count this as a call
     lp.predict(ctx)
     assert lp.is_cached(ctx)       # now cached -> no call
+
+
+def test_budget_stops_new_calls_but_serves_cache(tmp_path):
+    # budget of 2 new calls: 2 distinct contexts spend it, a 3rd raises;
+    # but a repeat of a cached context still returns (no new spend).
+    client = MockLLMClient(_GOOD)
+    budget = UsageBudget(max_calls=2)
+    lp = LLMPredictor(client, "m", "P0", cache=ResponseCache(tmp_path), budget=budget)
+    c1, c2, c3 = _ctx(("a",)), _ctx(("b",)), _ctx(("c",))
+    lp.predict(c1)
+    lp.predict(c2)
+    assert budget.calls == 2
+    lp.predict(c1)  # cached -> no new call, no raise
+    assert budget.calls == 2
+    with pytest.raises(BudgetExceededError):
+        lp.predict(c3)  # would be a 3rd new call
+
+
+def test_budget_records_cost(tmp_path):
+    client = MockLLMClient(_GOOD)  # mock cost defaults to 0.0
+    budget = UsageBudget(max_cost_usd=1.0)
+    lp = LLMPredictor(client, "m", "P0", cache=ResponseCache(tmp_path), budget=budget)
+    lp.predict(_ctx(("a",)))
+    assert budget.calls == 1  # under $ budget (mock cost 0) -> allowed
 
 
 def test_usage_limit_backoff_then_raises(tmp_path, monkeypatch):
