@@ -28,7 +28,7 @@ from src.predictors.baselines import (
     RandomStratifiedPredictor,
     estimate_class_freq,
 )
-from src.predictors.llm_client import ClaudeCLIClient
+from src.predictors.llm_client import ClaudeCLIClient, LLMUsageLimitError
 from src.predictors.llm_predictor import LLMPredictor
 from src.predictors.response_cache import ResponseCache
 from src.report.plots import equity_curve_figure
@@ -153,6 +153,7 @@ def main() -> None:
     cache = ResponseCache(cfg.get("llm", {}).get("cache_dir", "cache/llm"))
     llm_predictors = build_llm_predictors(cfg, cache, prompts, args.llm_model) if (args.llm or args.dry_run) else []
     dry_total_calls = 0
+    usage_limit_hit = False
 
     assets = cfg["assets"] if not args.assets else [a for a in cfg["assets"] if a["id"] in args.assets]
 
@@ -202,18 +203,27 @@ def main() -> None:
                         print(f"[dry-run] {asset_id:>3} · {horizon:<7} · {cell}: "
                               f"{total} decisions, {misses} uncached Claude calls")
                         continue
-                    records = run_walk_forward(
-                        lp, asset_id, kind, horizon, band_cfg,
-                        news_provider=news, market_provider=market,
-                        window_start=scored_start, window_end=scored_end,
-                        condition=condition, max_news=args.llm_max_news,
-                        max_decisions=args.llm_limit,
-                    )
+                    try:
+                        records = run_walk_forward(
+                            lp, asset_id, kind, horizon, band_cfg,
+                            news_provider=news, market_provider=market,
+                            window_start=scored_start, window_end=scored_end,
+                            condition=condition, max_news=args.llm_max_news,
+                            max_decisions=args.llm_limit,
+                        )
+                    except LLMUsageLimitError as e:
+                        print(f"\n⚠️  Claude usage limit reached at {cell} — stopping LLM "
+                              f"runs and saving partial results (cache preserves progress; "
+                              f"resume after reset). {str(e)[:120]}")
+                        usage_limit_hit = True
+                        break
                     if records.empty:
                         continue
                     records_by_model[cell] = records
                     all_rows.append(score_cell(records, close, kind, horizon, cost_bps, cfg))
                     print(f"scored {asset_id:>3} · {horizon:<7} · {cell}  (n={len(records)})")
+                if usage_limit_hit:
+                    break
 
             # one equity-curve figure per asset at the primary (daily) horizon
             if horizon == "daily" and records_by_model:
@@ -221,6 +231,10 @@ def main() -> None:
                     records_by_model, close, asset_id, horizon, kind, cost_bps, cfg,
                     out_dir / "figures" / f"equity_{asset_id}_{horizon}.png",
                 )
+            if usage_limit_hit:
+                break
+        if usage_limit_hit:
+            break
 
     if args.dry_run:
         print(f"\n[dry-run] total uncached Claude calls that a real run would make: "

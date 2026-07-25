@@ -36,6 +36,41 @@ The honest result may well be humbling — and that's a valid, publishable outco
 
 ---
 
+## Headline finding (first result): no, it does not beat the market
+
+We ran **Claude Opus 4.8** reading only point-in-time news (prompt P0, zero-shot),
+**daily** horizon, net of costs, over a real post-cutoff clean window
+(2026-01-01 → 2026-07-23; SPY n=138, BTC/ETH n=203). Claude vs. the baselines:
+
+| Asset | Claude acc | Best baseline acc | Claude PT p (FDR q) | Claude Sharpe | Buy&Hold Sharpe |
+|---|---|---|---|---|---|
+| **SPY** | 27.5% | 41.3% (random) | 0.86 (0.94) | **−3.70** | **+1.01** |
+| **BTC** | 29.6% | 29.6% (Claude) | 0.39 (0.94) | +0.32 | −0.85 |
+| **ETH** | 29.1% | 33.0% (random) | 0.56 (0.94) | +0.08 | −0.92 |
+
+**No statistically significant directional skill on any asset** (every
+Pesaran–Timmermann p ≫ 0.05; every FDR-adjusted q ≈ 0.94), and Claude's 3-class
+accuracy is **below the naive baselines**.
+
+- **SPY (a rising market): Claude loses badly.** It repeatedly shorted an index
+  that rose +12.8%, posting a −3.70 Sharpe. This is the STOCKBENCH / H2 result.
+- **Crypto looks like a win but isn't skill.** Claude beat buy-and-hold on BTC/ETH
+  **only because it is reflexively bearish** — it predicted DOWN 84% of the time
+  on BTC and 82% on ETH, and crypto happened to fall. A standing short bias
+  mechanically profits in a bear market; PT confirms no timing skill, and had
+  crypto risen it would have lost as badly as on SPY. **This is exactly the false
+  "edge" the significance tests + prediction-distribution audit exist to catch.**
+
+Full write-up and equity curves: [`results/llm_sweep/SUMMARY.md`](results/llm_sweep/SUMMARY.md).
+
+**Scope & honesty.** This is one prompt (P0), one model, one ~6.5-month window,
+daily horizon, coarse monthly news coverage. The wider prompt sweep (P1–P3,
+news+price) and at-scale memorization probes are **partially run** — they paused
+on the Claude subscription usage limit (progress is cached and resumes on reset).
+Results are a time-stamped snapshot, not a law about markets.
+
+---
+
 ## Status
 
 | Phase | State |
