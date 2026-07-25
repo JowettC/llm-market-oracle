@@ -45,7 +45,10 @@ def main() -> None:
     cfg = load_config()
     llm_cfg = cfg.get("llm", {})
     budget_calls = args.budget_calls if args.budget_calls is not None else llm_cfg.get("budget_calls")
-    budget = UsageBudget(max_calls=budget_calls) if budget_calls else None
+    _cache_dir = llm_cfg.get("cache_dir", "cache/llm")
+    window_state = str((REPO_ROOT / _cache_dir / ".window_calls") if not Path(_cache_dir).is_absolute()
+                       else Path(_cache_dir) / ".window_calls")
+    budget = UsageBudget(max_calls=budget_calls, state_file=window_state) if budget_calls else None
     market = get_market_provider(cfg)
     news = get_news_provider(cfg)
     band_cfg = cfg["label_band"]

@@ -17,6 +17,7 @@ cd /home/jowettc/projects/llm-trading
 PY=.venv/bin/python
 WAIT="${AB_WAIT:-18000}"   # 5 hours
 BATCHLOG="/tmp/claude-1000/-home-jowettc-projects-llm-trading/ce6f7f53-828a-488d-b27c-e185ba3b48d2/scratchpad/ab_batch.log"
+WINDOW_STATE="/home/jowettc/projects/llm-trading/cache/llm/.window_calls"
 ts() { date -u +%Y-%m-%dT%H:%M:%SZ; }
 
 # Run one command as a batch; loop with 5h waits until it completes cleanly.
@@ -29,7 +30,10 @@ run_stage() {
     if grep -q "stopping LLM runs" "$BATCHLOG"; then
       local spent; spent=$(grep -oE "[0-9]+ new Claude calls" "$BATCHLOG" | tail -1)
       echo "[$(ts)] STAGE $name: budget/limit hit ($spent) — waiting ${WAIT}s then continuing"
-      sleep "$WAIT"; continue
+      sleep "$WAIT"
+      echo 0 > "$WINDOW_STATE"   # rolling window has reset — clear the window meter
+      echo "[$(ts)] STAGE $name: window meter reset; resuming"
+      continue
     fi
     if [ $rc -ne 0 ]; then
       echo "[$(ts)] STAGE $name: ERROR rc=$rc"; tail -8 "$BATCHLOG"; return 1

@@ -14,7 +14,8 @@ from __future__ import annotations
 import json
 import subprocess
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from pathlib import Path
 
 
 class LLMUsageLimitError(RuntimeError):
@@ -32,18 +33,33 @@ class BudgetExceededError(RuntimeError):
 @dataclass
 class UsageBudget:
     """A local spend meter. ``max_calls`` / ``max_cost_usd`` are hard ceilings on
-    NEW (uncached) Claude calls; either or both may be set (None = unlimited)."""
+    NEW (uncached) Claude calls; either or both may be set (None = unlimited).
+
+    WINDOW-AWARE: if ``state_file`` is given, the call count is loaded from and
+    persisted to that file, so the ceiling holds across process restarts *within
+    one rolling-limit window* (the subscription limit is per rolling window, not
+    per run). The driver clears the file after each 5h wait to start a fresh
+    window. Without a state_file the meter is per-process only.
+    """
 
     max_calls: int | None = None
     max_cost_usd: float | None = None
     calls: int = 0
     cost_usd: float = 0.0
+    state_file: str | None = None
+
+    def __post_init__(self) -> None:
+        if self.state_file and Path(self.state_file).exists():
+            try:
+                self.calls = int(Path(self.state_file).read_text().strip() or 0)
+            except (ValueError, OSError):
+                self.calls = 0
 
     def check(self) -> None:
         """Raise if making one more call would cross a ceiling."""
         if self.max_calls is not None and self.calls >= self.max_calls:
             raise BudgetExceededError(
-                f"call budget reached: {self.calls}/{self.max_calls} calls")
+                f"call budget reached: {self.calls}/{self.max_calls} calls this window")
         if self.max_cost_usd is not None and self.cost_usd >= self.max_cost_usd:
             raise BudgetExceededError(
                 f"cost budget reached: ${self.cost_usd:.2f}/${self.max_cost_usd:.2f}")
@@ -51,6 +67,11 @@ class UsageBudget:
     def record(self, cost_usd: float) -> None:
         self.calls += 1
         self.cost_usd += float(cost_usd or 0.0)
+        if self.state_file:
+            try:
+                Path(self.state_file).write_text(str(self.calls))
+            except OSError:
+                pass
 
 
 @dataclass

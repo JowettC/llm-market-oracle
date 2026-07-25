@@ -124,6 +124,23 @@ def test_budget_stops_new_calls_but_serves_cache(tmp_path):
         lp.predict(c3)  # would be a 3rd new call
 
 
+def test_budget_window_state_persists_across_instances(tmp_path):
+    # window-aware: a fresh UsageBudget loads the prior count from the state file,
+    # so restarts within one rolling window don't reset the ceiling.
+    sf = str(tmp_path / ".window_calls")
+    b1 = UsageBudget(max_calls=5, state_file=sf)
+    b1.record(0.0)
+    b1.record(0.0)
+    assert b1.calls == 2
+    b2 = UsageBudget(max_calls=5, state_file=sf)   # simulates a process restart
+    assert b2.calls == 2, "restart must resume the window count, not reset it"
+    b2.record(0.0)
+    b2.record(0.0)
+    b2.record(0.0)
+    with pytest.raises(BudgetExceededError):
+        b2.check()  # 5/5 reached across the two instances
+
+
 def test_budget_records_cost(tmp_path):
     client = MockLLMClient(_GOOD)  # mock cost defaults to 0.0
     budget = UsageBudget(max_cost_usd=1.0)

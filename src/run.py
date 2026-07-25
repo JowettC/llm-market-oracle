@@ -165,10 +165,14 @@ def main() -> None:
     llm_cfg = cfg.get("llm", {})
     budget_calls = args.budget_calls if args.budget_calls is not None else llm_cfg.get("budget_calls")
     budget_usd = args.budget_usd if args.budget_usd is not None else llm_cfg.get("budget_usd")
-    budget = UsageBudget(max_calls=budget_calls, max_cost_usd=budget_usd) \
+    _cache_dir = cfg.get("llm", {}).get("cache_dir", "cache/llm")
+    window_state = str((REPO_ROOT / _cache_dir / ".window_calls") if not Path(_cache_dir).is_absolute()
+                       else Path(_cache_dir) / ".window_calls")
+    budget = UsageBudget(max_calls=budget_calls, max_cost_usd=budget_usd, state_file=window_state) \
         if (budget_calls or budget_usd) else None
     if budget is not None:
-        print(f"# usage budget: max_calls={budget.max_calls} max_cost_usd={budget.max_cost_usd}")
+        print(f"# usage budget: max_calls={budget.max_calls} (already {budget.calls} this window) "
+              f"max_cost_usd={budget.max_cost_usd}")
     llm_predictors = build_llm_predictors(cfg, cache, prompts, args.llm_model, budget) if (args.llm or args.dry_run) else []
     dry_total_calls = 0
     usage_limit_hit = False
