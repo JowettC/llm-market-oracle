@@ -77,7 +77,7 @@ def run_placebo_probe(predictor: LLMPredictor, samples: list[tuple[PredictionCon
 
 
 def run_trivia_probe(client, model_string: str, cache, samples, theta_pct_fn,
-                     baseline_rate: float = 0.5) -> ProbeResult:
+                     baseline_rate: float = 0.5, budget=None) -> ProbeResult:
     """Ask the model to recall real outcomes (no news); high recall => contamination."""
     answered = correct = 0
     for ctx, label in samples:
@@ -86,7 +86,12 @@ def run_trivia_probe(client, model_string: str, cache, samples, theta_pct_fn,
         key = cache.key(model_string + "::trivia", system, user, [])
         text = cache.get(key)
         if text is None:
-            text = client.complete(system, user, model_string).text
+            if budget is not None:
+                budget.check()  # raises BudgetExceededError before spending
+            resp = client.complete(system, user, model_string)
+            if budget is not None:
+                budget.record(resp.cost_usd)
+            text = resp.text
             cache.put(key, text, meta={"probe": "trivia"})
         rec = parse_model_json(text).get("recall")
         s = score_trivia(rec, label)

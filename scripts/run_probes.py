@@ -15,7 +15,12 @@ from pathlib import Path
 from src.config import REPO_ROOT, asset_by_id, load_config
 from src.data.market_providers import get_market_provider
 from src.data.news_providers import get_news_provider
-from src.predictors.llm_client import ClaudeCLIClient
+from src.predictors.llm_client import (
+    BudgetExceededError,
+    ClaudeCLIClient,
+    LLMUsageLimitError,
+    UsageBudget,
+)
 from src.predictors.llm_predictor import LLMPredictor
 from src.predictors.response_cache import ResponseCache
 from src.probes.runner import run_masking_probe, run_placebo_probe, run_trivia_probe
@@ -34,9 +39,13 @@ def main() -> None:
     ap.add_argument("--prompt", default="P0")
     ap.add_argument("--limit", type=int, default=20, help="number of decision samples")
     ap.add_argument("--dry-run", action="store_true", help="estimate Claude calls, make none")
+    ap.add_argument("--budget-calls", type=int, default=None, help="hard ceiling on NEW calls")
     args = ap.parse_args()
 
     cfg = load_config()
+    llm_cfg = cfg.get("llm", {})
+    budget_calls = args.budget_calls if args.budget_calls is not None else llm_cfg.get("budget_calls")
+    budget = UsageBudget(max_calls=budget_calls) if budget_calls else None
     market = get_market_provider(cfg)
     news = get_news_provider(cfg)
     band_cfg = cfg["label_band"]
@@ -52,7 +61,7 @@ def main() -> None:
     cache = ResponseCache(cfg.get("llm", {}).get("cache_dir", "cache/llm"))
     client = ClaudeCLIClient()
     predictor = LLMPredictor(client, model_string, args.prompt, cache=cache,
-                             model_id=f"probe:{model_string}:{args.prompt}")
+                             model_id=f"probe:{model_string}:{args.prompt}", budget=budget)
 
     # collect samples over the clean (news) window
     n_start, n_end = None, None
@@ -80,11 +89,17 @@ def main() -> None:
 
     print(f"Running probes on {args.asset}·{args.horizon} with {len(samples)} samples "
           f"({model_string}, {args.prompt})\n")
-    results = [
-        run_masking_probe(predictor, samples),
-        run_placebo_probe(predictor, samples, items),
-        run_trivia_probe(client, model_string, cache, samples, _theta_pct),
-    ]
+    try:
+        results = [
+            run_masking_probe(predictor, samples),
+            run_placebo_probe(predictor, samples, items),
+            run_trivia_probe(client, model_string, cache, samples, _theta_pct, budget=budget),
+        ]
+    except (BudgetExceededError, LLMUsageLimitError) as e:
+        spent = budget.calls if budget else "?"
+        print(f"\n⚠️  stopping LLM runs — budget/limit reached ({spent} new calls). "
+              f"Cache preserves progress; resume later. {str(e)[:100]}")
+        raise SystemExit(3)
     lines = [f"# Lookahead / memorization probes — {args.asset}·{args.horizon}\n",
              f"Model `{model_string}`, prompt `{args.prompt}`, {len(samples)} samples "
              f"from the clean window. See PRD §7.3.\n"]
