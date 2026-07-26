@@ -131,8 +131,10 @@ llm:
   # Client-side usage ceiling (there is NO API to read remaining subscription
   # quota, §13.4). We meter NEW calls / $ per rolling-limit WINDOW (state file
   # cache/llm/.window_calls; reset by the driver after each 5h wait) and stop
-  # before this ceiling. Recalibrated 2026-07-25: ~181 calls read as ~35% usage,
-  # so 90% ≈ 465 calls; 460 keeps a safety margin. EDIT THIS LINE to change the
-  # per-window call budget — the next batch picks it up automatically.
-  budget_calls: 460               # hard cap on NEW Claude calls per window (null = off)
+  # before this ceiling. Recalibrated 2026-07-26: the sweep SHARES the Max window
+  # with the user's OWN Claude usage, so when they're active less headroom is
+  # left. Window 7 hit the REAL limit at 322 (vs a 460 budget) while the user was
+  # active. Lowered to 300 to stop well before the ceiling and leave the user
+  # room. EDIT THIS LINE to change the per-window budget — next batch picks it up.
+  budget_calls: 300               # hard cap on NEW Claude calls per window (null = off)
   budget_usd: null                # optional $ cap (API-equivalent, from CLI envelope)
