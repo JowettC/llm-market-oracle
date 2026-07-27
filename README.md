@@ -104,7 +104,7 @@ conditions, and the fairness probes.
 | **3. LLM harness (Claude Max subscription, no API key)** | ✅ **done** |
 | **4. Full sweep (24 cells) + robustness + memorization probes** | ✅ **done** |
 | 5. Analysis + write-up | ▫️ |
-| 6. Public-readiness | ▫️ |
+| **6. Public-readiness (secret scan, pre-commit hook)** | ✅ **done** |
 
 Phase 1 ships: the source-agnostic market/news providers, the point-in-time
 gate, up/down/stay labeling, the shared prediction schema, all five baselines,
@@ -168,7 +168,7 @@ against subscription usage limits (use `--dry-run` to size it, `--llm-limit` /
 python3 -m venv .venv && source .venv/bin/activate
 python -m pip install -e ".[dev]"        # or: pip install -r requirements.lock.txt
 
-python -m pytest -q                       # 50 tests incl. leakage + ingestion suites
+python -m pytest -q                       # 72 tests incl. leakage + ingestion suites
 python -m scripts.verify_fairness         # audit the committed news corpus for leakage
 python -m src.run                         # baseline sweep -> results/ (md, csv, figures)
 #   python -m src.run --smoke             # daily horizon only (quick)
