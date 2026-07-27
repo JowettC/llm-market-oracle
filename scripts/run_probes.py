@@ -112,7 +112,7 @@ def main() -> None:
                      + "\n".join(f"- {k}: {v}" for k, v in r.metrics.items())
                      + f"\n\n**Interpretation:** {r.interpretation}\n")
 
-    out = REPO_ROOT / "results" / "probes.md"
+    out = REPO_ROOT / "results" / f"probes_{args.asset}.md"
     out.write_text("\n".join(lines), encoding="utf-8")
     print(f"wrote {out}")
 

@@ -75,10 +75,22 @@ step-by-step reasoning:
 | BTC DOWN-share | 84% | 77% | 81% | 78% |
 | ETH DOWN-share | 82% | 78% | 84% | 69% |
 
+**The null result is genuine — not contamination.** Both input conditions
+(news-only and news+price) are complete: **0 of 24 cells** (4 prompts × 3 assets
+× 2 conditions) show significant skill. And the at-scale memorization probes
+(§7.3, 40 samples/asset) confirm the result is real, not leakage
+([`results/probes_summary.md`](results/probes_summary.md)):
+
+| Probe | Result | Meaning |
+|---|---|---|
+| **Future-trivia** | Claude answered UNKNOWN **0/120** post-cutoff dates | zero memorization — it doesn't know the test period |
+| **Placebo-news** | 35–50% of predictions change on mismatched news | it genuinely reads the news (just predicts poorly) |
+| **Date-masking** | no accuracy drop when all dates hidden | not keying on remembered calendar dates |
+
 **Scope & honesty.** One model, one ~6.5-month window, daily horizon, coarse
-monthly news coverage. The **news+price** condition and the at-scale memorization
-probes are still running (paced under the subscription usage limit; progress is
-cached). Results are a time-stamped snapshot, not a law about markets.
+monthly news coverage. Results are a time-stamped snapshot, not a law about
+markets — but within that scope the conclusion is robust across prompts, input
+conditions, and the fairness probes.
 
 ---
 
@@ -90,7 +102,7 @@ cached). Results are a time-stamped snapshot, not a law about markets.
 | **1. Scaffold + data pipeline + leakage test** | ✅ **done** |
 | **2. Baselines + backtest engine + committed baseline results** | ✅ **done** |
 | **3. LLM harness (Claude Max subscription, no API key)** | ✅ **done** |
-| 4. Lookahead/memorization probes ✅ · full sweep + robustness ⏳ | 🔶 in progress |
+| **4. Full sweep (24 cells) + robustness + memorization probes** | ✅ **done** |
 | 5. Analysis + write-up | ▫️ |
 | 6. Public-readiness | ▫️ |
 

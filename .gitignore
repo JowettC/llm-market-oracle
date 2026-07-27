@@ -33,8 +33,8 @@ data/news/*.jsonl.gz
 # ---- Generated result artifacts that may embed raw model output ----
 results/*.raw
 results/**/*.raw
-# LLM-dependent probe output is generated per-run by the user (not committed as a
-# tiny-n smoke); the code + tests are the deliverable.
+# Transient per-run probe scratch file (the committed deliverables are the
+# per-asset probes_{SPY,BTC,ETH}.md and probes_summary.md).
 results/probes.md
 
 # ---- OS / editor ----
