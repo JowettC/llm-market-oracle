@@ -65,17 +65,26 @@ Full write-up and equity curves: [`results/llm_sweep/SUMMARY.md`](results/llm_sw
 
 ### The result in three charts
 
-**Following Claude's calls loses to just holding** — catastrophically on the rising index:
+**$10,000 followed through the 6.5-month test — following Claude vs. just holding.**
+On the S&P 500 you'd end with **$7,536 vs. $10,734**. On crypto both fall, but
+Claude's permanent short bias happens to cushion a falling market (that's luck,
+not skill — see the third chart):
 
-![Sharpe: follow Claude vs. buy & hold](results/figures/summary_sharpe.png)
+![Ending capital from $10k: follow Claude vs. buy & hold](results/figures/summary_capital.png)
 
 **On SPY it shorted a market that kept rising** (Claude in brown vs. buy & hold dashed):
 
 ![SPY equity curve](results/llm_sweep/figures/equity_SPY_daily.png)
 
-**Its crypto "win" is a reflexive bearish bias — identical under every prompt**, not skill:
+**Its crypto "win" is a reflexive bearish bias — identical under every prompt**, not skill.
+It calls crypto DOWN ~80% of the time whether zero-shot or reasoning step-by-step;
+in a falling market that mechanically "profits," but it would have lost just as
+badly had crypto risen (as it did on SPY):
 
 ![DOWN-share by prompt](results/figures/summary_bias.png)
+
+*(Risk-adjusted, the same story: Sharpe is −3.70 for following Claude on SPY vs.
++1.01 for holding — see [`results/figures/summary_sharpe.png`](results/figures/summary_sharpe.png).)*
 
 **The result is robust across prompts.** The full daily **news-only** prompt
 sweep (P0 zero-shot, P1 chain-of-thought, P2 structured-analyst, P3 sentiment)

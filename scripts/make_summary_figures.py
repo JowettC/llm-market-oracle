@@ -75,6 +75,41 @@ def fig_sharpe(cfg):
     return out
 
 
+def fig_capital(cfg, start=10000):
+    """Grouped bars: ending capital from a $10k start — follow Claude vs. hold."""
+    df = pd.read_csv(REPO_ROOT / "results" / "llm_sweep" / "baseline_metrics.csv")
+    assets = [a for a, _ in ASSETS]
+    claude = [start * float(df[(df.asset == a) & (df.model == "claude_opus:P0")]["final_equity"].iloc[0]) for a in assets]
+    hold = [start * float(df[(df.asset == a) & (df.model == "claude_opus:P0")]["bh_final_equity"].iloc[0]) for a in assets]
+
+    x = np.arange(len(assets))
+    w = 0.36
+    fig, ax = plt.subplots(figsize=(8, 4.8))
+    b1 = ax.bar(x - w / 2, claude, w, label="Follow Claude", color=CLAUDE_C, zorder=3)
+    b2 = ax.bar(x + w / 2, hold, w, label="Just hold (buy & hold)", color=HOLD_C, zorder=3)
+    ax.axhline(start, color=INK, linewidth=1.2, linestyle="--", zorder=4)
+    ax.annotate(f"start: ${start:,}", (2.42, start), color=INK, fontsize=9,
+                va="center", ha="left")
+    for bars in (b1, b2):
+        for r in bars:
+            h = r.get_height()
+            ax.annotate(f"${h:,.0f}", (r.get_x() + r.get_width() / 2, h), ha="center",
+                        va="bottom", fontsize=10, color=INK, xytext=(0, 3),
+                        textcoords="offset points")
+    ax.set_xticks(x, assets)
+    ax.set_ylabel("Ending capital (USD)", color=MUTED, fontsize=10)
+    ax.set_ylim(0, max(max(claude), max(hold)) * 1.15)
+    ax.set_title(f"${start:,} over the 6.5-month test — follow Claude vs. just hold",
+                 color=INK, fontsize=13, fontweight="bold", pad=12)
+    ax.legend(frameon=False, fontsize=10, loc="upper right")
+    ax.yaxis.set_major_formatter(lambda v, _p: f"${v/1000:.0f}k")
+    _style(ax)
+    fig.tight_layout()
+    out = FIG_DIR / "summary_capital.png"
+    fig.savefig(out, dpi=130); plt.close(fig)
+    return out
+
+
 def fig_bias(cfg):
     """Grouped bars: Claude's DOWN-share of predictions by prompt, per asset."""
     market = get_market_provider(cfg); news = get_news_provider(cfg)
@@ -121,6 +156,7 @@ def fig_bias(cfg):
 def main():
     cfg = load_config()
     FIG_DIR.mkdir(parents=True, exist_ok=True)
+    print("wrote", fig_capital(cfg))
     print("wrote", fig_sharpe(cfg))
     print("wrote", fig_bias(cfg))
 
