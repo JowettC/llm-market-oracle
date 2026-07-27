@@ -63,6 +63,20 @@ accuracy is **below the naive baselines**.
 
 Full write-up and equity curves: [`results/llm_sweep/SUMMARY.md`](results/llm_sweep/SUMMARY.md).
 
+### The result in three charts
+
+**Following Claude's calls loses to just holding** — catastrophically on the rising index:
+
+![Sharpe: follow Claude vs. buy & hold](results/figures/summary_sharpe.png)
+
+**On SPY it shorted a market that kept rising** (Claude in brown vs. buy & hold dashed):
+
+![SPY equity curve](results/llm_sweep/figures/equity_SPY_daily.png)
+
+**Its crypto "win" is a reflexive bearish bias — identical under every prompt**, not skill:
+
+![DOWN-share by prompt](results/figures/summary_bias.png)
+
 **The result is robust across prompts.** The full daily **news-only** prompt
 sweep (P0 zero-shot, P1 chain-of-thought, P2 structured-analyst, P3 sentiment)
 is complete: **no prompt achieves significant skill** (every FDR q ≈ 0.94), and
@@ -103,7 +117,7 @@ conditions, and the fairness probes.
 | **2. Baselines + backtest engine + committed baseline results** | ✅ **done** |
 | **3. LLM harness (Claude Max subscription, no API key)** | ✅ **done** |
 | **4. Full sweep (24 cells) + robustness + memorization probes** | ✅ **done** |
-| 5. Analysis + write-up | ▫️ |
+| **5. Analysis + write-up (results, figures, summaries)** | ✅ **done** |
 | **6. Public-readiness (secret scan, pre-commit hook)** | ✅ **done** |
 
 Phase 1 ships: the source-agnostic market/news providers, the point-in-time
@@ -151,18 +165,18 @@ Phase 4 also ships **robustness** for the baselines (`scripts/run_robustness.py`
 (results across `k ∈ {0.25, 0.5, 1.0}`) and rolling-window decay (per-sub-period
 accuracy + Sharpe, exposing non-stationarity, H4).
 
-Still to come in Phase 4: the full 72-cell LLM sweep — **user-run**, paced
-against subscription usage limits (use `--dry-run` to size it, `--llm-limit` /
-`--assets` / `--prompts` to stage it).
+The full daily LLM sweep (all prompts × both conditions, ~3,800 Claude calls)
+was run end-to-end on the Max subscription, self-paced under the usage limit
+(window-aware budget in `config/experiment.yaml`; `scripts/run_ab_auto.sh`).
 
-> ⚠️ The committed `data/` files are **synthetic samples** (deterministic, from
-> `scripts/make_sample_data.py`) so everything runs offline with no network.
-> They carry no real predictive signal. Real snapshots replace them via the live
-> providers in later phases — see [`data/README.md`](data/README.md).
+> **Data is real.** Committed prices are real (SPY via Yahoo, BTC/ETH via
+> Binance); committed news is a real GDELT corpus with leakage-safe timestamps —
+> see [`data/README.md`](data/README.md) and `data/news/MANIFEST.json`. Run
+> `python -m scripts.verify_fairness` to audit it yourself.
 
 ---
 
-## Reproduce (Phases 1–2)
+## Reproduce
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
